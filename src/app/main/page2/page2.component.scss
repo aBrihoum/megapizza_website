@@ -1,0 +1,293 @@
+@import "/src/assets/css/media_queries";
+
+.main {
+  padding-top: 60px;
+
+  .background {
+    // background-image: url(/assets/images/pages/2/background.webp);
+    background-size: calc(135px + (241 - 135) * ((100vw - 300px) / (1980 - 300)));
+    animation: page_2 15s linear infinite;
+    background-repeat: repeat;
+    padding: 30px 0 45px 0;
+
+    @include breakpoint(sm) {
+      animation-duration: 25s;
+    }
+
+    @include breakpoint(md) {
+      animation-duration: 35s;
+    }
+
+    @include breakpoint(xl) {
+      animation-duration: 50s;
+    }
+
+    @include breakpoint(xxl) {
+      animation-duration: 60s;
+    }
+
+    .main-container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      @media (max-width: 992px) {
+        flex-direction: column-reverse;
+      }
+
+      .container-1,
+      .container-2 {
+        position: relative;
+        width: 50%;
+        text-align: center;
+
+        @media (max-width: 992px) {
+          width: 100%;
+        }
+      }
+
+      .container-1 {
+        animation: fadeIn 3s 0s both;
+
+        @media (max-width: 992px) {
+          margin-top: 30px;
+        }
+      }
+
+      .container-2 {
+        .main-box {
+          padding: calc(8px + (28 - 8) * ((100vw - 300px) / (600 - 300)));
+          border: 3px solid var(--brown-5);
+          border-radius: 20px;
+          background-color: var(--glass);
+          text-align: center;
+          position: relative;
+
+          @include breakpoint(sm) {
+            padding: 28px
+          }
+
+          .feather-image {
+            position: absolute;
+            top: -57px;
+            right: -9px;
+            width: calc(50px + (80 - 50) * ((100vw - 300px) / (600 - 300)));
+            animation: bounce-in-top 1.5s .3s both;
+
+            @include breakpoint(sm) {
+              width: 83px;
+            }
+
+            @include breakpoint(md) {
+              width: 100px;
+            }
+
+            @include breakpoint(lg) {
+              width: 83px;
+              top: -80px;
+            }
+
+            @include breakpoint(xl) {
+              width: 92px;
+              top: -75px;
+            }
+          }
+
+          .signature-image {
+            position: absolute;
+            bottom: -39px;
+            right: -11px;
+            width: calc(89px + (170 - 89) * ((100vw - 300px) / (600 - 300)));
+            animation: bounceIn 1.5s .6s both;
+
+            @include breakpoint(sm) {
+              width: 158px;
+              right: -8px;
+              bottom: -53px;
+            }
+
+            @include breakpoint(md) {
+              width: 162px;
+              right: -13px;
+            }
+
+            @include breakpoint(xl) {
+              width: 188px;
+            }
+
+            @include breakpoint(xxl) {
+              right: -28px;
+              bottom: -68px;
+            }
+          }
+
+          .ornament-image {
+            margin: auto;
+            max-width: 361px;
+            position: relative;
+            animation: bounceIn 1s .1s both;
+
+            @include breakpoint(xxl) {
+              max-width: 100%
+            }
+          }
+
+          .texts-container {
+            font-family: Daybury;
+            font-weight: 500;
+
+            .text-1 {
+              font-size: calc(47px + (90 - 47) * ((100vw - 300px) / (600 - 300)));
+              padding-bottom: 12px;
+              animation: text-shadow-pop-left 1s 1s both;
+
+              @include breakpoint(sm) {
+                font-size: 90px
+              }
+            }
+
+            .text-2 {
+              font-size: calc(24px + (40 - 24) * ((100vw - 300px) / (600 - 300)));
+              color: var(--brown-6);
+              border: 2px solid var(--brown-6);
+              display: inline-block;
+              border-radius: 10px;
+              background-color: rgb(0 0 0 / 18%);
+              padding: 9px 21px;
+              animation: text-shadow-pop-left 1s 1s both;
+
+              @include breakpoint(sm) {
+                font-size: 40px
+              }
+            }
+          }
+
+          .paragraph {
+            font-family: "Futura PT Book";
+            text-align: justify;
+            font-size: calc(16px + (19 - 16) * ((100vw - 300px) / (600 - 300)));
+            margin: 20px 0 20px 0;
+
+            @include breakpoint(sm) {
+              font-size: 19px
+            }
+          }
+
+          .learn-more {
+            color: var(--brown-6);
+            font-family: "Futura PT Book";
+            font-weight: 600;
+            text-align: start;
+            font-size: calc(16px + (19 - 16) * ((100vw - 300px) / (600 - 300)));
+            animation: focus-in-expand 1.5s 0s both;
+
+            @include breakpoint(sm) {
+              font-size: 18px
+            }
+
+            @include breakpoint(xl) {
+              font-size: 20px
+            }
+
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+              transform: translateY(-3px);
+            }
+          }
+
+          .hr-line {
+            margin: 35px 0px 22px 0px;
+          }
+
+
+        }
+      }
+    }
+  }
+
+  .buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 45px;
+
+    >button {
+      margin: 10px 15px;
+      font-family: "Futura PT Book";
+      font-weight: 600;
+      font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (600 - 300)));
+      min-width: calc(118px + (140 - 118) * ((100vw - 300px) / (600 - 300)));
+      animation: bounceIn 1s .1s both;
+
+      @include breakpoint(sm) {
+        font-size: 20px;
+        min-width: 140px
+      }
+
+      @include breakpoint(lg) {
+        min-width: 150px
+      }
+
+      &.active {
+        color: black;
+        background-color: var(--brown-6);
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .ornament-picture-2 {
+    width: 230px;
+    margin: 30px auto;
+    position: relative;
+    animation: bounceInUp 1.1s .5s both;
+  }
+
+  .video-container {
+    position: relative;
+    height: 40vh;
+    transition: 200ms;
+
+    video {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      opacity: 0.6;
+      filter: blur(4.5px) !important;
+    }
+
+    .loading-svg-c {
+      max-width: 120px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+  }
+
+  .play-button {
+    max-width: 64px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: 300ms;
+    position: absolute;
+
+    &:hover {
+      max-width: 84px;
+    }
+  }
+}
+
+@keyframes page_2 {
+  from {
+    background-position-x: left;
+  }
+
+  to {
+    background-position-x: right;
+  }
+}

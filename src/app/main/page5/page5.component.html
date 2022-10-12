@@ -1,0 +1,106 @@
+<section class="main lazyload nb" data-bg="assets/images/pages/5/background.webp">
+    <div class="main-container">
+        <div class="why-us-container">
+            <div class="container-1 wow">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    data-src="./assets/images/pages/5/why-us.webp" class="img-res lazyload"
+                    alt="(La Méga Pizza) Why us">
+                <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+            </div>
+            <div class="container-2">
+                <h1 class="heading text-1 wow">WHY</h1>
+                <h1 class="heading text-2 wow">YOU SHOULD CHOOSE US?</h1>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAABCAQAAAC4AnxFAAAAC0lEQVR42mNkQAEAAB4AAiZVyN4AAAAASUVORK5CYII="
+                    data-src="./assets/images/pages/5/line.webp" class="img-res lazyload line-desktop"
+                    alt="(La Méga Pizza)">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAABCAQAAAC4AnxFAAAAC0lEQVR42mNkQAEAAB4AAiZVyN4AAAAASUVORK5CYII="
+                    data-src="./assets/images/pages/5/line-mobile.webp" class="img-res lazyload line-mobile"
+                    alt="(La Méga Pizza)">
+                <p class="paragraph">
+                    Perhaps because we're the best?
+                    <br>
+                    I mean, we can't say good things about ourselves.
+                    <br>
+                    Which is why you may <span (click)="Shared.jumpToSection('#reviews-section')" class="badge">ask
+                        them.</span>
+                </p>
+            </div>
+
+
+        </div>
+
+        <div class="reviews-container" id="reviews-section">
+            <div class="container-1">
+                <h1 class="heading text-1 wow">OUR</h1>
+                <h1 class="heading text-2 wow">CUSTOMER REVIEWS</h1>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAABCAQAAAC4AnxFAAAAC0lEQVR42mNkQAEAAB4AAiZVyN4AAAAASUVORK5CYII="
+                    data-src="./assets/images/pages/5/line.webp" class="img-res lazyload line-desktop"
+                    alt="(La Méga Pizza)">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAABCAQAAAC4AnxFAAAAC0lEQVR42mNkQAEAAB4AAiZVyN4AAAAASUVORK5CYII="
+                    data-src="./assets/images/pages/5/line-mobile.webp" class="img-res lazyload line-mobile"
+                    alt="(La Méga Pizza)">
+                <p class="paragraph">
+                    Aut amet sapiente unde ut ratione.
+                    <br>
+                    Consectetur aut magni distinctio totam nostrum sapiente aperiam cum eum. Pariatur consequatur
+                    vel aperiam illum sapiente
+                    aut eum eius. Fugit quis laudantium corrupti dicta harum perferendis aut excepturi. Quae
+                    exercitationem ullam adipisci.
+                </p>
+            </div>
+            <div class="container-2 slide-height">
+                <swiper [config]="slide" class="slide-height">
+                    <ng-template swiperSlide *ngFor="let review of reviews">
+                        <div class="review-container">
+                            <a class="customer-pic" [href]="review.fb" target="_blank" rel="noopener noreferrer">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                    [attr.data-src]="review.picture" class="img-res lazyload"
+                                    alt="{{review.name}} - Facebook">
+                                <div class="loader"></div>
+                            </a>
+                            <div class="customer-name">
+                                <span>{{review.name}}</span>
+                                <br>
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAABCAQAAAC896x4AAAAC0lEQVR42mNkgAMAABYAAqmTp+YAAAAASUVORK5CYII="
+                                    data-src="./assets/images/pages/5/svg/stars.svg" alt="stars"
+                                    class="customer-stars lazyload">
+                            </div>
+                            <a [href]="review.fb" target="_blank" rel="noopener noreferrer" class="fb-icon">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                    data-src="./assets/images/pages/5/svg/fb.svg" alt="fb" class="lazyload img-res">
+                            </a>
+
+                            <p class="custumer-review">{{review.review}}</p>
+                        </div>
+                    </ng-template>
+                </swiper>
+
+            </div>
+
+        </div>
+
+        <div class="best-ingredients-container">
+            <h1 class="heading text-3 wow">The best ingredients</h1>
+            <br>
+            <p class="paragraph large">
+                We take an enormous amount of pride in sourcing our ingredients carefully to ensure that the flavors
+                of
+                our food are as
+                delicious and authentic as possible. We achieved this stage of excellence by putting an extra level
+                of
+                care into our
+                menu items that are difficult to find at other restaurants.
+            </p>
+            <div class="ing-picture-container wow">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAQAAACx6dw/AAAAC0lEQVR42mNkAAMAAA4AAjOwv9wAAAAASUVORK5CYII="
+                    data-src="./assets/images/pages/5/ingredients.webp" alt="ingredients" class="img-res lazyload">
+                <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+            </div>
+        </div>
+    </div>
+    <div class="custom-shape-divider-top-1635101495">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+        </svg>
+    </div>
+</section>

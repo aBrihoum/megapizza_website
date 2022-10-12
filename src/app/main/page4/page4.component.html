@@ -1,0 +1,123 @@
+<div class="main-container" id="info-section">
+
+    <div class="title-container">
+        <h1 class="wow">Retrouvez-nous</h1>
+    </div>
+
+
+    <div class="towns-container">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+            data-src="./assets/images/svg/pin.svg" alt="pin" class="lazyload pin-icon wow">
+        <h2 class="city-name wow"> {{Shared.pickedCity.name}} </h2>
+        <div class="buttons-container">
+            <ng-container *ngFor="let town of Shared.pickedCityTowns;let i = index">
+                <button data-remove-animation [class.b6-active]="town.name == Shared.pickedTown.name"
+                    (click)="Shared.changeTown(i);refresh()" class="btn btn-brown-6 wow">{{town.name}}</button>
+            </ng-container>
+        </div>
+        <img (click)="Shared.showModal()"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+            data-src="./assets/images/svg/play.svg" alt="Play Button" class="play-button lazyload w-auto">
+    </div>
+
+
+    <div class="informations-container">
+        <div class="flex-container">
+            <div class="container-one">
+                <swiper [config]="slide">
+                    <ng-template swiperSlide *ngFor="let slide of Shared.pickedTown.slides;let i = index">
+                        <div class="image-container wow" (click)="Lg.openGallery(i,'buildings')">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                                [attr.data-src]="slide.path" alt="{{slide.alt}}" class="img-res lazyload">
+                            <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                        </div>
+                    </ng-template>
+                </swiper>
+            </div>
+            <div class="container-two">
+                <h1 class="heading text-1 hr-text wow">La Méga Pizza</h1>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    data-src="./assets/images/svg/map-red.svg" alt="map" class="map-icon lazyload wow">
+                <h2 class="heading text-2 wow">{{Shared.pickedCity.name}} - {{Shared.pickedTown.name}}</h2>
+                <div class="opening-informations">
+                    <div class="flex-container">
+                        <div class="container-one">
+                            <p class="heading days wow">Samedi - Jeudi</p>
+                            <p class="heading hours wow">11:00 am - 22:00 pm</p>
+                        </div>
+                        <div class="container-two">
+                            <p class="heading days wow">Vendredi</p>
+                            <p class="heading hours wow">14:30 pm - 22:00 pm</p>
+                        </div>
+                    </div>
+                    <hr class="c-hr">
+                    <div class="flex-container">
+                        <div class="container-one">
+                            <button #emailButton class="btn btn-brown-6 wow" (click)="createTooltip(emailButton,email)">
+                                {{Shared.pickedCity.email}}
+                            </button>
+                        </div>
+                        <div class="container-two">
+                            <button #phoneButton class="btn btn-brown-6 wow" (click)="createTooltip(phoneButton,phone)">
+                                {{Shared.pickedTown.phones[0]}}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="just-a-margin">
+            <hr class="c-hr">
+        </div>
+        <div class="social-container">
+            <div class="container-one">
+                <div class="fb wow">
+                    <div class="image-container">
+                        <a [href]="Shared.pickedTown.fb" target="_blank" rel="noopener noreferrer">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                data-src="./assets/images/pages/4/fb.webp" class="img-res lazyload"
+                                alt="(La Méga Pizza) - {{Shared.pickedCity.name}}, {{Shared.pickedTown.name}} - Facebook">
+                            <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                        </a>
+                    </div>
+                </div>
+                <div class="ig wow">
+                    <div class="image-container">
+                        <a [href]="Shared.pickedTown.ig" target="_blank" rel="noopener noreferrer">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                data-src="./assets/images/pages/4/ig.webp" class="img-res lazyload"
+                                alt="(La Méga Pizza) - {{Shared.pickedCity.name}}, {{Shared.pickedTown.name}} - Instagram">
+                            <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container-two">
+                <div class="image-container map wow">
+                    <a [href]="Shared.pickedTown.map" target="_blank" rel="noopener noreferrer" class="d-flex">
+                        <img #map
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+                            [attr.data-src]="Shared.pickedTown.mapPic" class="img-res lazyload"
+                            alt="(La Méga Pizza) - {{Shared.pickedCity.name}}, {{Shared.pickedTown.name}} - Google map">
+                        <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div #email class="tooltip">
+    <p (click)="copyText(Shared.pickedCity.email);showToast('Email copied with success')">Copier l'e-mail</p>
+    <p><a href="mailto:{{Shared.pickedCity.email}}">Envoyer un e-mail</a></p>
+</div>
+
+<div #phone class="tooltip">
+    <div *ngFor="let phone of Shared.pickedTown.phones">{{phone}}
+        <button (click)="copyText(phone);showToast('Phone copied with success')" class="btn">Copier</button>
+        <button class="btn"><a href="tel:{{phone}}">Appeler</a></button>
+    </div>
+</div>

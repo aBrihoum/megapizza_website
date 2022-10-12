@@ -1,0 +1,233 @@
+<section class="main lazyload nb" data-bg="assets/images/pages/3/background.webp">
+    <div id="menu-section">
+        <div class="title-container">
+            <h1 class="wow">Menu</h1>
+        </div>
+
+        <div class="main-container">
+            <div class="menu-container">
+                <div class="part-1">
+                    <div class="menu-images" (click)="refresh()">
+                        <div data-remove-animation class="wow"
+                            [class.active]="Shared.pickedMealCategory.name === 'pizza'"
+                            (click)="Shared.changeMealCategory('pizza')">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                                data-src="./assets/images/pages/3/pizza.webp" alt="(La Méga Pizza) - Pizza"
+                                class="img-res lazyload">
+                            <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                        </div>
+                        <div data-remove-animation class="wow"
+                            [class.active]="Shared.pickedMealCategory.name === 'tacos'"
+                            (click)="Shared.changeMealCategory('tacos')">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                                data-src="./assets/images/pages/3/tacos.webp" alt="(La Méga Pizza) - Tacos"
+                                class="img-res lazyload">
+                            <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                        </div>
+                        <div data-remove-animation class="wow"
+                            [class.active]="Shared.pickedMealCategory.name === 'dessert'"
+                            (click)="Shared.changeMealCategory('dessert')">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                                data-src="./assets/images/pages/3/dessert.webp" alt="(La Méga Pizza) - Dessert"
+                                class="img-res lazyload">
+                            <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                        </div>
+                    </div>
+                    <hr class="c-hr">
+                    <div class="menu-titles" (click)="refresh()">
+                        <div (click)="Shared.changeMealCategory('pizza')">
+                            <h2 [class.active]="Shared.pickedMealCategory.name === 'pizza'" class="title wow">Pizza
+                            </h2>
+
+                        </div>
+                        <div (click)="Shared.changeMealCategory('tacos')">
+                            <h2 [class.active]="Shared.pickedMealCategory.name === 'tacos' " class="title wow">Tacos
+                                &#38; Soufflé</h2>
+                        </div>
+                        <div (click)="Shared.changeMealCategory('dessert')">
+                            <h2 [class.active]="Shared.pickedMealCategory.name === 'dessert'" class="title wow">
+                                Dessert</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="part-2">
+                    <div class="slides-container" id="lg-slides">
+                        <div class="text wow">
+                            <span>Gallery &#8594;</span>
+                        </div>
+                        <swiper [config]="slide">
+                            <ng-template swiperSlide
+                                *ngFor="let slide of Shared.pickedMealCategory.slides ; let i = index">
+                                <div class="image-container" (click)="Lg.openGallery(i,'food')">
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                                        [attr.data-src]="slide.path" alt="{{slide.alt}}" class="img-res lazyload">
+                                    <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                                </div>
+                                <p class="image-title wow">{{slide.title}}</p>
+                            </ng-template>
+                        </swiper>
+                    </div>
+                </div>
+
+                <div class="part-3">
+                    <div class="container">
+                        <div class="buttons-container">
+                            <ng-container *ngFor="let button of Shared.pickedMealCategory.menu; let i = index">
+                                <button data-remove-animation [class.b6-active]="i === pickedMenuIndex "
+                                    (click)="pickedMenuIndex = i;Shared.changeMealCategoryMenu(i);refresh()"
+                                    class="btn btn-brown-6 wow">
+                                    {{button.title}}
+                                </button>
+                            </ng-container>
+                        </div>
+                        <div class="ornament-picture wow">
+                            <img class="img-res lazyload"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAABCAQAAAC4AnxFAAAAC0lEQVR42mNkQAEAAB4AAiZVyN4AAAAASUVORK5CYII="
+                                data-src="./assets/images/pieces/c-ornament-2.webp" alt="ornament">
+                            <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                        </div>
+
+                        <div class="menus-container">
+                            <div class="icons-container">
+                                <img data-remove-animation
+                                    (click)="link.download(Shared.pickedMealCategoryMenu.path,Shared.pickedMealCategoryMenu.alt)"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                    data-src="./assets/images/svg/dl.svg" alt="dl" class="icon lazyload dl wow">
+                                <img data-remove-animation (click)="link.open(Shared.pickedMealCategoryMenu.path)"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                                    data-src="./assets/images/svg/link.svg" alt="dl" class="icon lazyload link wow">
+                            </div>
+                            <img #menu (click)="Lg.openGallery(pickedMenuIndex,'menus')"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                                [attr.data-src]="Shared.pickedMealCategoryMenu.path_min"
+                                class="img-res menu-image lazyload wow" alt="{{Shared.pickedMealCategoryMenu.alt}}">
+                            <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="custom-shape-divider-bottom-16350976980">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path #shapeUpper
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                class="shape-fill"></path>
+        </svg>
+    </div>
+</section>
+
+<section #slidesSection class="slides">
+    <div #headerText class="header text-1">
+        <h1 class="wow">Yes, We deliver.</h1>
+    </div>
+
+    <swiper [config]="slide2" (slideChange)="onSlideChange($event)">
+        <ng-template swiperSlide let-data>
+            <div #activeSlide id="slide-1" class="slide-container" [attr.data-active]="data.isActive ? 'active' : ''">
+                <div class="bg nb lazyload" data-bg="assets/images/svg/one-2.svg"></div>
+                <div class="pieces">
+                    <img class="top lazyload"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pieces/herb-6.webp" alt="herb">
+                    <img class="rotating lazyload"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pieces/lemon.webp" alt="lemon">
+                    <img class="btm lazyload"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pieces/herb-10.webp" alt="herb">
+                </div>
+                <div class="step-1">
+                    <img class="img-res lazyload"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pages/3/steps/1.webp" alt="(La Méga Pizza) - Livraison étape 1">
+                    <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                </div>
+                <h1 class="header text-2 ">Pick Your <span (click)="Shared.jumpToSection('#menu-section')"
+                        class="underline">Favorite Food</span></h1>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide let-data>
+            <div #activeSlide id="slide-2" class="slide-container" [attr.data-active]="data.isActive ? 'active' : ''">
+                <div class="bg nb rotate lazyload" data-bg="assets/images/svg/one-2.svg"></div>
+                <div class="pieces">
+                    <img class="top left lazyload"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pieces/olives-2.webp" alt="herb">
+                    <img class="rotating left lazyload"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pieces/tomato-slice.webp" alt="lemon">
+                    <img class="btm left lazyload"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pieces/olives-3.webp" alt="herb">
+                </div>
+                <div class="step-2">
+                    <img class="img-res lazyload"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pages/3/steps/2.webp" alt="(La Méga Pizza) - Livraison étape 2">
+                    <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                </div>
+                <h1 class="header text-2">Order by <span (click)="Shared.jumpToSection('#info-section')"
+                        class="underline">Calling us</span></h1>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide let-data>
+            <div #activeSlide id="slide-3" class="slide-container" [attr.data-active]="data.isActive ? 'active' : ''">
+                <div class="bg nb lazyload" data-bg="assets/images/svg/one-2.svg"></div>
+                <div class="pieces">
+                    <img class="top lazyload"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pieces/herb-6.webp" alt="herb">
+                    <img class="rotating lazyload"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pieces/lemon.webp" alt="lemon">
+                    <img class="btm lazyload"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pieces/herb-10.webp" alt="herb">
+                </div>
+                <div class="step-3">
+                    <img class="img-res lazyload"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pages/3/steps/3.webp" alt="(La Méga Pizza) - Livraison étape 3">
+                    <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                </div>
+                <h1 class="header text-2">Sit Back and Relax, The rest is on
+                    us!</h1>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div #activeSlide id="slide-4" class="slide-container">
+                <div class="bg nb rotate lazyload" data-bg="assets/images/svg/one-2.svg"></div>
+                <div class="pieces">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pieces/olives-2.webp" alt="herb" class="top left lazyload">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pieces/tomato-slice.webp" alt="lemon" class="rotating left lazyload">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pieces/olives-3.webp" alt="herb" class="btm left lazyload">
+                </div>
+                <div class="step-4">
+                    <img class="img-res lazyload lazyload"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                        data-src="./assets/images/pages/3/steps/4.webp" alt="(La Méga Pizza) - Livraison étape 4">
+                    <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                </div>
+                <h1 class="header text-2">Eat &amp; Enjoy</h1>
+            </div>
+        </ng-template>
+    </swiper>
+</section>
+
+
+
+
+<div class="custom-shape-divider-bottom-1635100151">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path #shapeLower
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"></path>
+    </svg>
+</div>

@@ -1,0 +1,200 @@
+[
+    {
+        "name": "Constantine",
+        "email": "cne@megapizza.dz",
+        "towns": [
+            {
+                "name": "Ali Mendjeli",
+                "videoThumbnail": "assets/videos/constantine/ali-mendjeli/(la-mega-pizza)-constantine-ali-mendjeli.webp",
+                "videoPath": "assets/videos/constantine/ali-mendjeli/(la-mega-pizza)-constantine-ali-mendjeli.m4v",
+                "fb": "https://facebook.com",
+                "ig": "https://instagram.com",
+                "map": "https://www.google.com/maps/place/MEGA+PIZZA/@36.2641301,6.5887668,19z/data=!4m5!3m4!1s0x12f17005347e894d:0x217d8758989af5fa!8m2!3d36.2642231!4d6.588859",
+                "mapPic": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-map.webp",
+                "youtube": "https://www.youtube.com/embed/5UXcNa6Z4kg?autoplay=1",
+                "phones": [
+                    "0561 08 31 11",
+                    "0561 01 90 74",
+                    "0559 03 51 19"
+                ],
+                "slides": [
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-1.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-2.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-3.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-4.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-5.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-6.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-7.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-8.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    }
+                ]
+            },
+            {
+                "name": "El khroub",
+                "videoThumbnail": "assets/videos/constantine/elkhroub/(la-mega-pizza)-constantine-elkhroub.webp",
+                "videoPath": "assets/videos/constantine/elkhroub/(la-mega-pizza)-constantine-elkhroub.m4v",
+                "fb": "https://facebook.com",
+                "ig": "https://instagram.com",
+                "map": "https://www.google.com/maps/place/Mega+Pizza/@36.267591,6.6891021,18z/data=!4m9!1m2!2m1!1sMEGA+PIZZA!3m5!1s0x12f172695e5a9875:0xf8f1aac527bd601d!8m2!3d36.267591!4d6.6912907!15sCgpNRUdBIFBJWlpBWgwiCm1lZ2EgcGl6emGSARBwaXp6YV9yZXN0YXVyYW504AEA",
+                "mapPic": "assets/images/gallery/buildings/constantine/elkhroub/(la-mega-pizza)-constantine-elkhroub-map.webp",
+                "youtube": "https://www.youtube.com/embed/5UXcNa6Z4kg?autoplay=1",
+                "phones": [
+                    "0361 00 80 32",
+                    "0561 01 90 74",
+                    "0559 03 51 19"
+                ],
+                "slides": [
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/elkhroub/(la-mega-pizza)-constantine-elkhroub-1.webp",
+                        "alt": "(La Méga Pizza) - Constantine, El khroub"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/elkhroub/(la-mega-pizza)-constantine-elkhroub-2.webp",
+                        "alt": "(La Méga Pizza) - Constantine, El khroub"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/elkhroub/(la-mega-pizza)-constantine-elkhroub-3.webp",
+                        "alt": "(La Méga Pizza) - Constantine, El khroub"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/elkhroub/(la-mega-pizza)-constantine-elkhroub-4.webp",
+                        "alt": "(La Méga Pizza) - Constantine, El khroub"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/elkhroub/(la-mega-pizza)-constantine-elkhroub-5.webp",
+                        "alt": "(La Méga Pizza) - Constantine, El khroub"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/elkhroub/(la-mega-pizza)-constantine-elkhroub-6.webp",
+                        "alt": "(La Méga Pizza) - Constantine, El khroub"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/elkhroub/(la-mega-pizza)-constantine-elkhroub-7.webp",
+                        "alt": "(La Méga Pizza) - Constantine, El khroub"
+                    }
+                ]
+            },
+            {
+                "name": "Sidi Mabrouk",
+                "videoThumbnail": "assets/videos/constantine/ali-mendjeli/(la-mega-pizza)-constantine-ali-mendjeli.webp",
+                "videoPath": "assets/videos/constantine/ali-mendjeli/(la-mega-pizza)-constantine-ali-mendjeli.m4v",
+                "fb": "https://facebook.com",
+                "ig": "https://instagram.com",
+                "map": "https://goo.gl/map/NP18RCG2CqGRJLtN9",
+                "mapPic": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-map.webp",
+                "youtube": "https://www.youtube.com/embed/EQk5V4dabHI?autoplay=1",
+                "phones": [
+                    "0561 08 31 11",
+                    "0561 01 90 74",
+                    "0559 03 51 19"
+                ],
+                "slides": [
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-1.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-2.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-3.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-4.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-5.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-6.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-7.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-8.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    }
+                ]
+            },
+            {
+                "name": "Les Arcades",
+                "videoThumbnail": "assets/videos/constantine/ali-mendjeli/(la-mega-pizza)-constantine-ali-mendjeli.webp",
+                "videoPath": "assets/videos/constantine/ali-mendjeli/(la-mega-pizza)-constantine-ali-mendjeli.m4v",
+                "fb": "https://facebook.com",
+                "ig": "https://instagram.com",
+                "map": "https://goo.gl/map/NP18RCG2CqGRJLtN9",
+                "mapPic": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-map.webp",
+                "youtube": "https://www.youtube.com/embed/EQk5V4dabHI?autoplay=1",
+                "phones": [
+                    "0561 08 31 11",
+                    "0561 01 90 74",
+                    "0559 03 51 19"
+                ],
+                "slides": [
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-1.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-2.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-3.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-4.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-5.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-6.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-7.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    },
+                    {
+                        "path": "assets/images/gallery/buildings/constantine/ali-mendjli/(la-mega-pizza)-constantine-ali-mendjeli-8.webp",
+                        "alt": "(La Méga Pizza) - Constantine, Ali mendjli"
+                    }
+                ]
+            }
+        ]
+    }
+]

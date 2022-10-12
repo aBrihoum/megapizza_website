@@ -1,0 +1,149 @@
+[
+    {
+        "name": "pizza",
+        "slides": [
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-pizza-1.webp",
+                "alt": "(La Méga Pizza) - Pizza",
+                "title": "Sint placeat"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-pizza-2.webp",
+                "alt": "(La Méga Pizza) - Pizza",
+                "title": "Eos voluptatem"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-pizza-3.webp",
+                "alt": "(La Méga Pizza) - Pizza",
+                "title": "Ea nihil"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-pizza-4.webp",
+                "alt": "(La Méga Pizza) - Pizza",
+                "title": "Sint placeat"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-pizza-5.webp",
+                "alt": "(La Méga Pizza) - Pizza",
+                "title": "Eos voluptatem"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-pizza-6.webp",
+                "alt": "(La Méga Pizza) - Pizza",
+                "title": "Ea nihil"
+            }
+        ],
+        "menu": [
+            {
+                "path": "assets/images/menu/pizza/base-sauce-pizza/_large/menu-(la-mega-pizza)-pizza-base-sauce-pizza.webp",
+                "path_min": "assets/images/menu/pizza/base-sauce-pizza/menu-(la-mega-pizza)-pizza-base-sauce-pizza.webp",
+                "alt": "(La Méga Pizza) - Menu Pizza : Base Sauce Pizza",
+                "title": "Base Sauce Pizza"
+            },
+            {
+                "path": "assets/images/menu/pizza/base-creme-fraiche/_large/menu-(la-mega-pizza)-pizza-base-creme-fraiche.webp",
+                "path_min": "assets/images/menu/pizza/base-creme-fraiche/menu-(la-mega-pizza)-pizza-base-creme-fraiche.webp",
+                "alt": "(La Méga Pizza) - Menu Pizza : Base Crème Fraîche",
+                "title": "Base Crème Fraîche"
+            }
+        ]
+    },
+    {
+        "name": "tacos",
+        "slides": [
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-tacos-1.webp",
+                "alt": "(La Méga Pizza) - Tacos",
+                "title": "Sint placeat"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-souffle-4.webp",
+                "alt": "(La Méga Pizza) - Soufflé",
+                "title": "Eos voluptatem"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-tacos-3.webp",
+                "alt": "(La Méga Pizza) - Tacos",
+                "title": "Ea nihil"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-souffle-1.webp",
+                "alt": "(La Méga Pizza) - Soufflé",
+                "title": "Sint placeat"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-tacos-4.webp",
+                "alt": "(La Méga Pizza) - Tacos",
+                "title": "Eos voluptatem"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-souffle-2.webp",
+                "alt": "(La Méga Pizza) - Soufflé",
+                "title": "Ea nihil"
+            }
+        ],
+        "menu": [
+            {
+                "path": "assets/images/menu/tacos-souffle/tacos/_large/menu-(la-mega-pizza)-tacos.webp",
+                "path_min": "assets/images/menu/tacos-souffle/tacos/menu-(la-mega-pizza)-tacos.webp",
+                "alt": "(La Méga Pizza) - Menu Tacos",
+                "title": "Tacos"
+            },
+            {
+                "path": "assets/images/menu/tacos-souffle/souffle/_large/menu-(la-mega-pizza)-souffle.webp",
+                "path_min": "assets/images/menu/tacos-souffle/souffle/menu-(la-mega-pizza)-souffle.webp",
+                "alt": "(La Méga Pizza) - Menu Soufflé",
+                "title": "Soufflé"
+            }
+        ]
+    },
+    {
+        "name": "dessert",
+        "slides": [
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-dessert-2.webp",
+                "alt": "(La Méga Pizza) - Dessert",
+                "title": "Sint placeat"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-dessert-3.webp",
+                "alt": "(La Méga Pizza) - Dessert",
+                "title": "Eos voluptatem"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-dessert-5.webp",
+                "alt": "(La Méga Pizza) - Dessert",
+                "title": "Ea nihil"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-dessert-7.webp",
+                "alt": "(La Méga Pizza) - Dessert",
+                "title": "Sint placeat"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-dessert-8.webp",
+                "alt": "(La Méga Pizza) - Dessert",
+                "title": "Eos voluptatem"
+            },
+            {
+                "path": "assets/images/gallery/slides/(la-mega-pizza)-dessert-10.webp",
+                "alt": "(La Méga Pizza) - Dessert",
+                "title": "Ea nihil"
+            }
+        ],
+        "menu": [
+            {
+                "path": "assets/images/menu/dessert/_large/menu-(mega-pizza)-dessert-1.webp",
+                "path_min": "assets/images/menu/dessert/menu-(mega-pizza)-dessert-1.webp",
+                "alt": "(La Méga Pizza) - Menu Dessert N°01",
+                "title": "Menu Dessert N°01"
+            },
+            {
+                "path": "assets/images/menu/dessert/_large/menu-(mega-pizza)-dessert-2.webp",
+                "path_min": "assets/images/menu/dessert/menu-(mega-pizza)-dessert-2.webp",
+                "alt": "(La Méga Pizza) - Menu Dessert N°02",
+                "title": "Menu Dessert N°02"
+            }
+        ]
+    }
+]

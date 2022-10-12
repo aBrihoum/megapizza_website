@@ -1,0 +1,78 @@
+<section class="main">
+    <div class="background lazyload nb" data-bg="assets/images/pages/2/background.webp">
+        <div class="main-container">
+            <div class="container-1 wow">
+                <img data-src="./assets/images/pages/2/story.webp"
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    class="img-res lazyload" alt="(La Méga Pizza) - Notre Histoire">
+                <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+            </div>
+            <div class="container-2">
+                <div class="main-box">
+                    <div class="feather-image wow">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAQAAAD41K0JAAAADUlEQVR42mNkYGAEIwAAGwAE61CSsQAAAABJRU5ErkJggg=="
+                            data-src="./assets/images/pieces/feather.webp" class="img-res  lazyload" alt="feather">
+                        <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                    </div>
+                    <div class="signature-image wow">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                            data-src="./assets/images/pages/2/signature.webp" class="img-res  lazyload" alt="signature">
+                        <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                    </div>
+                    <div class="ornament-image wow">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAABCAQAAAC4AnxFAAAAC0lEQVR42mNkQAEAAB4AAiZVyN4AAAAASUVORK5CYII="
+                            data-src="./assets/images/pieces/ornament.webp" class="img-res lazyload" alt="ornament">
+                        <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+                    </div>
+                    <div class="texts-container">
+                        <h1 class="text-1 wow">Our Story</h1>
+                        <h2 class="text-2 wow">La Méga Pizza</h2>
+                    </div>
+                    <div class="hr-line">
+                        <div class="square"></div>
+                    </div>
+                    <p class="paragraph">
+                        Magnam sint ut inventore. Est provident sit. Ea nihil dolores doloremque voluptate.
+                        Distinctio ratione ex omnis
+                        consequatur repellendus sed sunt odio. Sint placeat omnis dignissimos ex dolorem eos
+                        voluptatem voluptatibus impedit.
+                        Est provident sit. Ea nihil dolores doloremque voluptate. placeat omnis dignissimos ex
+                        dolorem eos voluptatem
+                        voluptatibus impedit. Est provident sit. Ea nihil dolores doloremque voluptate
+                    </p>
+                    <div class="learn-more wow">
+                        <span>En savoir plus sur nous&#8594;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons-container">
+        <ng-container *ngFor="let town of Shared.pickedCityTowns;let i = index">
+            <button [class.active]="town.name == Shared.pickedTown.name" (click)="Shared.changeTown(i);refresh()"
+                data-remove-animation class="btn btn-brown-6 wow">{{town.name}}</button>
+        </ng-container>
+    </div>
+
+    <div class="ornament-picture-2 wow">
+        <img class="img-res lazyload"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAABCAQAAAC896x4AAAAC0lEQVR42mNkgAMAABYAAqmTp+YAAAAASUVORK5CYII="
+            data-src="./assets/images/pieces/c-ornament.webp" alt="ornament">
+        <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+    </div>
+
+    <div class="video-container">
+        <video (loadeddata)="loadingSvg.style.display = 'none'" #video autoplay muted loop playsinline class="lazyload"
+            [attr.data-src]="Shared.pickedTown.videoPath" [attr.data-poster]="Shared.pickedTown.videoThumbnail">
+            <source type="video/mp4">
+        </video>
+        <img (click)="Shared.showModal()"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+            data-src="./assets/images/svg/play.svg" alt="play Button" class="play-button lazyload">
+        <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading">
+        <img #loadingSvg class="loading-svg-c" src="./assets/images/svg/loading.svg" alt="loading">
+    </div>
+
+
+</section>

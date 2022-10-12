@@ -1,0 +1,349 @@
+@import "/src/assets/css/media_queries";
+
+.main-container {
+  >.title-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: calc(20px + (60 - 20) * ((100vw - 300px) / (1980 - 300)));
+
+    >h1 {
+      font-family: "Buckerley";
+      font-size: calc(33px + (66 - 33) * ((100vw - 300px) / (1980 - 300)));
+      color: var(--brown-6);
+      border: 3px solid var(--brown-5);
+      border-radius: 20px;
+      background-color: var(--glass);
+      padding: 4px calc(10px + (60 - 10) * ((100vw - 300px) / (1980 - 300)));
+      font-weight: 500;
+      animation: text-shadow-pop-left 1s 0s both;
+    }
+  }
+
+
+  .towns-container {
+    text-align: center;
+
+    .pin-icon {
+      width: calc(35px + (40 - 35) * ((100vw - 300px) / (1980 - 300)));
+      margin-bottom: 15px;
+      animation: bounceInDown 1.5s .2s both;
+    }
+
+    .city-name {
+      font-family: "Daybury";
+      color: var(--brown-6);
+      font-weight: 500;
+      font-size: calc(44px + (46 - 44) * ((100vw - 300px) / (1980 - 300)));
+      animation: focus-in-expand 1.2s 0s both;
+    }
+
+    .buttons-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px 0px 44px;
+
+      .btn {
+        font-family: "Futura PT Book";
+        font-weight: 600;
+        min-width: 150px;
+        margin: 10px 15px;
+        animation: bounceIn 1s .2s both;
+      }
+    }
+
+    .play-button {
+      cursor: pointer;
+      max-width: 60px;
+      animation: glow 1.5s ease-out infinite;
+      border-radius: 30%;
+      padding: 5px;
+      background-color: var(--brown-6);
+    }
+  }
+
+
+  .informations-container {
+    border: 3px solid var(--brown-5);
+    border-radius: 20px;
+    padding: 10px 6px;
+
+    @include breakpoint(xs) {
+      padding: 16px 12px;
+    }
+
+    @include breakpoint(sm) {
+      padding: 28px 22px;
+    }
+
+    @include breakpoint(lg) {
+      padding: 53px 22px;
+    }
+
+    @include breakpoint(xxl) {
+      padding: 53px 47px;
+    }
+
+    margin-top: 50px;
+
+    >.flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+
+      .container-one,
+      .container-two {
+        width: 100%;
+        text-align: center;
+
+        @include breakpoint(xl) {
+          width: calc(50% - 40px);
+        }
+      }
+
+      .container-one {
+        .image-container {
+          margin-bottom: 48px;
+          position: relative;
+          animation: fadeIn 3s 0s both;
+        }
+      }
+
+      .container-two {
+        >.heading {
+          font-family: Daybury;
+          font-weight: 500;
+          margin: 0;
+          color: var(--brown-6);
+
+          &.text-1 {
+            font-size: calc(27px + (60 - 27) * ((100vw - 300px) / (1200 - 300)));
+            animation: text-shadow-pop-left 1.2s 1s both;
+
+            @include breakpoint(xl) {
+              font-size: calc(48px + (60 - 48) * ((100vw - 1200px) / (1980 - 1200)));
+            }
+          }
+
+          &.text-2 {
+            font-size: calc(20px + (32 - 20) * ((100vw - 300px) / (1200 - 300)));
+            margin-bottom: 12px;
+            animation: focus-in-expand 1.2s .1s both;
+
+            @include breakpoint(xl) {
+              font-size: calc(29px + (34 - 29) * ((100vw - 1200px) / (1980 - 1200)));
+            }
+          }
+
+        }
+
+        .map-icon {
+          width: calc(33px + (50 - 33) * ((100vw - 300px) / (1980 - 300)));
+          margin: 6px 0;
+          animation: bounceInUp 1.5s .2s both;
+        }
+
+
+        .opening-informations {
+          border: 2px solid var(--brown-5);
+          border-radius: 20px;
+
+          >.flex-container {
+            display: flex;
+            gap: 20px;
+            padding: 0 16px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .container-one,
+            .container-two {
+              @include breakpoint(sm) {
+                width: calc(50% - 20px);
+              }
+
+              .heading {
+                font-family: "Pacifico";
+                color: var(--brown-6);
+
+                &.days {
+                  margin: 13px 0px;
+                  animation: text-shadow-pop-left 1.2s 2s both;
+                }
+
+                &.hours {
+                  border: 1px solid var(--brown-6);
+                  border-radius: 20px;
+                  padding: 6px 0;
+                  animation: focus-in-expand 1.2s 0s both;
+                }
+              }
+            }
+          }
+
+          .flex-container {
+            display: flex;
+            gap: 20px;
+            padding: 0px 16px 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .container-one,
+            .container-two {
+              @include breakpoint(md) {
+                width: calc(50% - 20px);
+              }
+
+              .btn {
+                font-family: "Futura PT Book";
+                font-weight: 100;
+                color: black;
+                background-color: var(--brown-6);
+                font-size: 20px;
+                width: 100%;
+                animation: focus-in-expand 1.5s 0s both;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .just-a-margin {
+      margin: 25px 0;
+    }
+
+    .social-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 35px;
+      justify-content: space-between;
+
+      .container-one,
+      .container-two {
+        width: 100%;
+        text-align: center;
+
+        @include breakpoint(lg) {
+          width: calc(50% - 18px);
+        }
+      }
+
+      .container-one {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-inline: 10px;
+        justify-content: space-between;
+
+        @include breakpoint(md) {
+          justify-content: space-around;
+        }
+
+        .ig,
+        .fb {
+          animation: fadeIn 3s 0s both;
+
+          @include breakpoint(xs) {
+            width: calc(50% - 8px);
+          }
+
+          @include breakpoint(md) {
+            width: calc(44% - 8px);
+          }
+
+          @include breakpoint(lg) {
+            width: calc(50% - 8px);
+          }
+
+          .image-container {
+            cursor: pointer;
+            position: relative;
+          }
+        }
+      }
+
+      .container-two {
+        .image-container.map {
+          animation: fadeIn 3s 0s both;
+        }
+      }
+    }
+  }
+}
+
+.c-hr {
+  margin: 1rem 0;
+  color: inherit;
+  border: 0;
+  border-top: 1px solid var(--brown-5);
+}
+
+.tooltip {
+  display: none;
+  background-color: var(--brown-6);
+  color: #000;
+  font-family: Futura PT Book;
+  font-weight: 100;
+  border-radius: 11px;
+  padding: 12px 0;
+  margin-top: 5px !important;
+  border: 1px solid rgb(0 0 0 / 36%);
+
+  >p,
+  >div {
+    padding: 5px 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  >p:hover {
+    background-color: rgb(205 183 156);
+    transform: translateY(-3px);
+  }
+
+  >div {
+    text-align: center;
+    cursor: default;
+    margin: 4px 0px;
+
+    >.btn {
+      padding: 3px 5px;
+      border-radius: 7px;
+      border: 0;
+      background-color: white;
+      margin-inline: 2px;
+      font-size: 14px;
+      font-family: 'Futura PT Book';
+      position: relative;
+      bottom: 5px;
+    }
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 7px 6px rgb(240 215 184 / 40%);
+    background-color: var(--brown-6);
+  }
+
+  50% {
+    box-shadow: 0 0 18px 10px rgb(240 215 184 / 40%);
+    background-color: var(--brown-6);
+  }
+
+  75% {
+    box-shadow: 0 0 18px 10px rgb(240 215 184 / 20%);
+    background-color: var(--brown-6);
+  }
+
+  100% {
+    box-shadow: 0 0 18px 10px rgb(240 215 184 / 0%);
+    background-color: var(--brown-6);
+  }
+
+  0% {
+    box-shadow: 0 0 0;
+    background-color: var(--brown-6);
+  }
+}
