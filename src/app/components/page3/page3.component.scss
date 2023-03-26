@@ -1,6 +1,6 @@
 @import "/src/assets/css/media_queries";
 
-.main {
+.main-block {
   // background-image: url(/assets/images/pages/3/background.webp);
   background-repeat: repeat;
   animation: page_3 4.5s infinite;
@@ -9,12 +9,11 @@
   background-size: calc(600px + (900 - 600) * ((100vw - 300px) / (1980 - 300)));
   padding: 120px 0px 130px;
 
-  .title-container {
-    display: flex;
-    justify-content: center;
+  .heading {
+    text-align: center;
     margin-bottom: 60px;
 
-    >h1 {
+    > h1 {
       font-family: "Buckerley";
       font-size: calc(60px + (90 - 60) * ((100vw - 300px) / (1980 - 300)));
       color: var(--brown-6);
@@ -26,64 +25,66 @@
       padding-inline: calc(26px + (60 - 26) * ((100vw - 300px) / (1980 - 300)));
       font-weight: 500;
       margin: 0;
-      animation: text-shadow-pop-left 1s .5s both;
+      animation: text-shadow-pop-left 1s 0.5s both;
     }
   }
 
-  .main-container {
-    .menu-container {
-      width: 100%;
-      margin-inline: auto;
+  .menu-container {
+    width: 100%;
+    margin-inline: auto;
 
-      @include breakpoint(lg) {
-        width: 90%;
-      }
+    @include breakpoint(lg) {
+      width: 90%;
+    }
 
-      @include breakpoint(xl) {
-        width: 80%;
-      }
+    @include breakpoint(xl) {
+      width: 80%;
+    }
 
-      .part-1 {
-        border: 3px solid var(--brown-5);
-        border-radius: 20px;
-        background-color: var(--glass);
+    .block-1 {
+      border: 3px solid var(--brown-5);
+      border-radius: 20px;
+      background-color: var(--glass);
 
+      .menu-pictures {
+        display: flex;
+        justify-content: center;
+        padding: calc(26px + (34 - 26) * ((100vw - 300px) / (1980 - 300))) 0px
+          calc(0px + (6 - 0) * ((100vw - 300px) / (1980 - 300)));
 
-        .menu-images {
-          display: flex;
-          justify-content: center;
-          padding: calc(26px + (34 - 26) * ((100vw - 300px) / (1980 - 300))) 0px calc(0px + (6 - 0) * ((100vw - 300px) / (1980 - 300)));
+        > .picture {
+          padding-inline: calc(0px + (25 - 0) * ((100vw - 300px) / (1980 - 300)));
+          transition: all 0.35s;
+          cursor: pointer;
+          width: 33.33333333333333333%;
+          position: relative;
+          animation: bounceIn 1.2s 0s both;
 
-          >div {
-            padding-inline: calc(0px + (25 - 0) * ((100vw - 300px) / (1980 - 300)));
-            transition: all 0.35s;
-            cursor: pointer;
-            width: 33.33333333333333333%;
-            position: relative;
-            animation: bounceIn 1.2s 0s both;
+          &.active {
+            transform: translateY(-10px);
+          }
 
-            &.active {
-              transform: translateY(-10px);
-            }
-
-            &:hover {
-              transform: translateY(-8px);
-            }
+          &:hover {
+            transform: translateY(-8px);
           }
         }
+      }
 
-        .c-hr {
-          margin: 1rem 0;
-          color: inherit;
-          border: 0;
-          border-top: 1px solid var(--brown-5);
-        }
+      hr.c-hr {
+        margin: 1rem 0;
+        color: inherit;
+        border: 0;
+        border-top: 1px solid var(--brown-5);
+      }
 
-        .menu-titles {
-          margin-bottom: 1rem;
-          display: flex;
-          justify-content: center;
+      .menu-titles {
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
 
+        .title-container {
+          width: 33.33333333%;
+          text-align: center;
           .title {
             font-family: "Daybury";
             color: var(--brown-6);
@@ -103,159 +104,152 @@
               transform: translateY(-3px);
             }
           }
-
-          >div {
-            width: 33.33333333%;
-            text-align: center;
-
-            &:nth-child(2) {
-              border-right: 2px solid var(--brown-5);
-              border-left: 2px solid var(--brown-5);
-            }
+          &:nth-child(2) {
+            border-right: 2px solid var(--brown-5);
+            border-left: 2px solid var(--brown-5);
           }
         }
       }
+    }
 
-      .part-2 {
-        .slides-container {
-          padding-top: 70px;
+    .block-2 {
+      .slides-container {
+        padding-top: 70px;
 
-          .text {
+        .title {
+          font-family: "Daybury";
+          color: var(--brown-6);
+          text-align: end;
+          margin-bottom: 10px;
+          animation: bounceInDown 1.5s 0s both;
+
+          span {
+            display: inline-block;
+            transition: all 0.3s;
+
+            &:hover {
+              transform: translateY(-6px);
+              color: var(--orange);
+              cursor: pointer;
+            }
+          }
+        }
+
+        .slide-picture-container {
+          border: 2px solid var(--brown-5);
+          border-radius: 20px;
+          background-color: var(--glass);
+          padding: 10px;
+          transition: all 0.3s;
+          cursor: zoom-in;
+          position: relative;
+
+          &:hover {
+            box-shadow: 0px 0px 9px 1px rgba(240, 215, 184, 0.471);
+            transform: scale(0.98);
+          }
+        }
+
+        .slide-title {
+          font-family: "Daybury";
+          color: var(--brown-6);
+          padding: 26px 0 60px;
+          text-align: center;
+          animation: focus-in-expand 1.5s 0s both;
+        }
+      }
+    }
+
+    .block-3 {
+      .container {
+        // .container is a global class
+        border-radius: 20px;
+        background-color: var(--glass);
+        margin-inline: auto;
+        padding-bottom: calc(14px + (45 - 14) * ((100vw - 300px) / (1980 - 300)));
+        @include breakpoint(xl) {
+          width: 90%;
+        }
+
+        .buttons-container {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 34px 0;
+          justify-content: center;
+
+          button {
             font-family: "Daybury";
-            color: var(--brown-6);
-            text-align: end;
-            margin-bottom: 10px;
-            animation: bounceInDown 1.5s 0s both;
+            font-size: calc(19px + (25 - 19) * ((100vw - 300px) / (1980 - 300)));
+            min-width: calc(163px + (219 - 163) * ((100vw - 300px) / (1980 - 300)));
+            font-weight: 500;
+            margin-inline: 15px;
+            margin-bottom: 12px;
+            animation: bounceIn 1s 0.1s both;
+          }
+        }
 
-            span {
-              display: inline-block;
+        .ornament-picture {
+          width: calc(170px + (290 - 170) * ((100vw - 300px) / (1980 - 300)));
+          margin-inline: auto;
+          margin-bottom: 30px;
+          position: relative;
+          animation: scale-in-center 1.1s 0.5s both;
+        }
+
+        .menus-container {
+          width: 92%;
+          margin-inline: auto;
+          position: relative;
+
+          @include breakpoint(md) {
+            width: 85%;
+          }
+
+          @include breakpoint(lg) {
+            width: 75%;
+          }
+
+          @include breakpoint(xxl) {
+            width: 70%;
+          }
+
+          .icons-container {
+            margin: 0px 15px 15px 15px;
+            display: flex;
+            justify-content: space-between;
+
+            .icon {
+              width: calc(20px + (25 - 20) * ((100vw - 300px) / (1980 - 300)));
               transition: all 0.3s;
+              cursor: pointer;
+
+              &.link {
+                animation: bounceInDown 1.1s 0.2s both;
+              }
+
+              &.dl {
+                animation: bounceInUp 1.1s 0.2s both;
+              }
 
               &:hover {
-                transform: translateY(-6px);
                 color: var(--orange);
-                cursor: pointer;
+                transform: translateY(-6px);
               }
             }
           }
 
-          .image-container {
+          .menu-image {
             border: 2px solid var(--brown-5);
             border-radius: 20px;
             background-color: var(--glass);
-            padding: 10px;
+            padding: calc(5px + (10 - 5) * ((100vw - 300px) / (1980 - 300)));
             transition: all 0.3s;
             cursor: zoom-in;
-            position: relative;
+            animation: bounceIn 2s 0s both;
 
             &:hover {
               box-shadow: 0px 0px 9px 1px rgba(240, 215, 184, 0.471);
               transform: scale(0.98);
-            }
-          }
-
-          .image-title {
-            font-family: "Daybury";
-            color: var(--brown-6);
-            padding: 26px 0 60px;
-            text-align: center;
-            animation: focus-in-expand 1.5s 0s both;
-          }
-        }
-      }
-
-      .part-3 {
-        .container {
-          border-radius: 20px;
-          background-color: var(--glass);
-          margin-inline: auto;
-          padding-bottom: calc(14px + (45 - 14) * ((100vw - 300px) / (1980 - 300)));
-          ;
-
-          @include breakpoint(xl) {
-            width: 90%;
-          }
-
-          .buttons-container {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 34px 0;
-            justify-content: center;
-
-            .btn {
-              font-family: "Daybury";
-              font-size: calc(19px + (25 - 19) * ((100vw - 300px) / (1980 - 300)));
-              min-width: calc(163px + (219 - 163) * ((100vw - 300px) / (1980 - 300)));
-              font-weight: 500;
-              margin-inline: 15px;
-              margin-bottom: 12px;
-              animation: bounceIn 1s 0.1s both;
-            }
-          }
-
-          .ornament-picture {
-            width: calc(170px + (290 - 170) * ((100vw - 300px) / (1980 - 300)));
-            margin-inline: auto;
-            margin-bottom: 30px;
-            position: relative;
-            animation: scale-in-center 1.1s .5s both;
-          }
-
-          .menus-container {
-            width: 92%;
-            margin-inline: auto;
-            position: relative;
-
-            @include breakpoint(md) {
-              width: 85%;
-            }
-
-            @include breakpoint(lg) {
-              width: 75%;
-            }
-
-            @include breakpoint(xxl) {
-              width: 70%;
-            }
-
-            .icons-container {
-              margin: 0px 15px 15px 15px;
-              display: flex;
-              justify-content: space-between;
-
-              .icon {
-                width: calc(20px + (25 - 20) * ((100vw - 300px) / (1980 - 300)));
-                transition: all .3s;
-                cursor: pointer;
-
-                &.link {
-                  animation: bounceInDown 1.1s .2s both;
-                }
-
-                &.dl {
-                  animation: bounceInUp 1.1s .2s both;
-                }
-
-                &:hover {
-                  color: var(--orange);
-                  transform: translateY(-6px);
-                }
-              }
-            }
-
-            .menu-image {
-              border: 2px solid var(--brown-5);
-              border-radius: 20px;
-              background-color: var(--glass);
-              padding: calc(5px + (10 - 5) * ((100vw - 300px) / (1980 - 300)));
-              transition: all 0.3s;
-              cursor: zoom-in;
-              animation: bounceIn 2s 0s both;
-
-              &:hover {
-                box-shadow: 0px 0px 9px 1px rgba(240, 215, 184, 0.471);
-                transform: scale(0.98);
-              }
             }
           }
         }
@@ -264,21 +258,6 @@
   }
 }
 
-@keyframes page_3 {
-  0% {
-    background-position-y: 0px;
-  }
-
-  50% {
-    background-position-y: -30px;
-  }
-
-  100% {
-    background-position-y: 0px;
-  }
-}
-
-
 .slides {
   .header {
     text-align: center;
@@ -286,7 +265,7 @@
     font-family: Daybury;
     z-index: 2;
 
-    >h1 {
+    > h1 {
       display: inline-block;
       animation: focus-in-expand 1.5s 0s both;
     }
@@ -301,7 +280,7 @@
     &.text-2 {
       font-size: calc(30px + (80 - 45) * ((100vw - 300px) / (1980 - 300)));
 
-      >.underline {
+      > .underline {
         text-decoration: underline;
         cursor: pointer;
         transition: all 0.3s;
@@ -339,7 +318,7 @@
         opacity: 0.7;
       }
 
-      @media (min-width:468px) {
+      @media (min-width: 468px) {
         display: block;
       }
 
@@ -363,7 +342,6 @@
 
       .rotating {
         max-width: calc(80px + (105 - 80) * ((100vw - 768px) / (1980 - 768)));
-        ;
         top: 43%;
         right: 30px;
         animation: rotate 2s linear infinite;
@@ -453,7 +431,6 @@
   }
 }
 
-
 // upper
 .custom-shape-divider-bottom-16350976980 {
   position: absolute;
@@ -483,7 +460,7 @@
     }
 
     .shape-fill {
-      fill: #cc9c68
+      fill: #cc9c68;
     }
   }
 }
@@ -517,12 +494,10 @@
     }
 
     .shape-fill {
-      fill: #cc9c68
+      fill: #cc9c68;
     }
   }
 }
-
-
 
 @keyframes bg {
   0% {
@@ -535,5 +510,19 @@
 
   100% {
     background-position-x: -0;
+  }
+}
+
+@keyframes page_3 {
+  0% {
+    background-position-y: 0px;
+  }
+
+  50% {
+    background-position-y: -30px;
+  }
+
+  100% {
+    background-position-y: 0px;
   }
 }
