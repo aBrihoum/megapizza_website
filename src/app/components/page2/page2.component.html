@@ -61,10 +61,10 @@
   </div>
 
   <div class="buttons-container">
-    <ng-container *ngFor="let town of Shared.pickedCityTowns; let i = index">
+    <ng-container *ngFor="let town of pickedCityTowns; index as i">
       <button
-        [class.active]="town.name == Shared.pickedTown.name"
-        (click)="Shared.changeTown(i); refresh()"
+        [class.active]="town.name == pickedTown.name"
+        (click)="changeTown(i)"
         data-remove-animation
         class="btn btn-brown-6 wow"
       >
@@ -92,13 +92,13 @@
       loop
       playsinline
       class="lazyload"
-      [attr.data-src]="Shared.pickedTown.videoPath"
-      [attr.data-poster]="Shared.pickedTown.videoThumbnail"
+      [attr.data-src]="pickedTown.videoPath"
+      [attr.data-poster]="pickedTown.videoThumbnail"
     >
       <source type="video/mp4" />
     </video>
     <img
-      (click)="Shared.showModal()"
+      (click)="showModal()"
       src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
       data-src="./assets/images/svg/play.svg"
       alt="play Button"

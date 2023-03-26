@@ -15,6 +15,7 @@
     "dist": true,
     ".angular": true,
     ".gitignore": true,
-    "tmp": true
+    "tmp": true,
+    "readme-src": true
   }
 }

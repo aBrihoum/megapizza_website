@@ -25,186 +25,185 @@
     @include breakpoint(xxl) {
       animation-duration: 60s;
     }
+  }
 
-    .main-container {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      flex-direction: column-reverse;
+  .main-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    @include breakpoint(lg) {
+      flex-direction: row;
+    }
+
+    .block-1,
+    .block-2 {
+      position: relative;
+      width: 100%;
+      text-align: center;
       @include breakpoint(lg) {
-        flex-direction: row;
+        width: 50%;
       }
+    }
 
-      .block-1,
-      .block-2 {
-        position: relative;
-        width: 100%;
+    .block-1 {
+      animation: fadeIn 3s 0s both;
+      margin-top: 30px;
+
+      @include breakpoint(lg) {
+        margin-top: 0;
+      }
+    }
+
+    .block-2 {
+      .box {
+        padding: calc(8px + (28 - 8) * ((100vw - 300px) / (600 - 300)));
+        border: 3px solid var(--brown-5);
+        border-radius: 20px;
+        background-color: var(--glass);
         text-align: center;
-        @include breakpoint(lg) {
-          width: 50%;
+        position: relative;
+
+        @include breakpoint(sm) {
+          padding: 28px;
         }
-      }
 
-      .block-1 {
-        animation: fadeIn 3s 0s both;
-        margin-top: 30px;
-
-        @include breakpoint(lg) {
-          margin-top: 0;
-        }
-      }
-
-      .block-2 {
-        .box {
-          padding: calc(8px + (28 - 8) * ((100vw - 300px) / (600 - 300)));
-          border: 3px solid var(--brown-5);
-          border-radius: 20px;
-          background-color: var(--glass);
-          text-align: center;
-          position: relative;
+        .feather-image {
+          position: absolute;
+          top: -57px;
+          right: -9px;
+          width: calc(50px + (80 - 50) * ((100vw - 300px) / (600 - 300)));
+          animation: bounce-in-top 1.5s 0.3s both;
 
           @include breakpoint(sm) {
-            padding: 28px;
+            width: 83px;
           }
 
-          .feather-image {
-            position: absolute;
-            top: -57px;
-            right: -9px;
-            width: calc(50px + (80 - 50) * ((100vw - 300px) / (600 - 300)));
-            animation: bounce-in-top 1.5s 0.3s both;
+          @include breakpoint(md) {
+            width: 100px;
+          }
+
+          @include breakpoint(lg) {
+            width: 83px;
+            top: -80px;
+          }
+
+          @include breakpoint(xl) {
+            width: 92px;
+            top: -75px;
+          }
+        }
+
+        .signature-image {
+          position: absolute;
+          bottom: -39px;
+          right: -11px;
+          width: calc(89px + (170 - 89) * ((100vw - 300px) / (600 - 300)));
+          animation: bounceIn 1.5s 0.6s both;
+
+          @include breakpoint(sm) {
+            width: 158px;
+            right: -8px;
+            bottom: -53px;
+          }
+
+          @include breakpoint(md) {
+            width: 162px;
+            right: -13px;
+          }
+
+          @include breakpoint(xl) {
+            width: 188px;
+          }
+
+          @include breakpoint(xxl) {
+            right: -28px;
+            bottom: -68px;
+          }
+        }
+
+        .ornament-image {
+          margin: auto;
+          max-width: 361px;
+          position: relative;
+          animation: bounceIn 1s 0.1s both;
+
+          @include breakpoint(xxl) {
+            max-width: 100%;
+          }
+        }
+
+        .heading {
+          font-family: Daybury;
+          font-weight: 500;
+
+          &__1 {
+            font-size: calc(47px + (90 - 47) * ((100vw - 300px) / (600 - 300)));
+            padding-bottom: 12px;
+            animation: text-shadow-pop-left 1s 1s both;
 
             @include breakpoint(sm) {
-              width: 83px;
-            }
-
-            @include breakpoint(md) {
-              width: 100px;
-            }
-
-            @include breakpoint(lg) {
-              width: 83px;
-              top: -80px;
-            }
-
-            @include breakpoint(xl) {
-              width: 92px;
-              top: -75px;
+              font-size: 90px;
             }
           }
 
-          .signature-image {
-            position: absolute;
-            bottom: -39px;
-            right: -11px;
-            width: calc(89px + (170 - 89) * ((100vw - 300px) / (600 - 300)));
-            animation: bounceIn 1.5s 0.6s both;
-
-            @include breakpoint(sm) {
-              width: 158px;
-              right: -8px;
-              bottom: -53px;
-            }
-
-            @include breakpoint(md) {
-              width: 162px;
-              right: -13px;
-            }
-
-            @include breakpoint(xl) {
-              width: 188px;
-            }
-
-            @include breakpoint(xxl) {
-              right: -28px;
-              bottom: -68px;
-            }
-          }
-
-          .ornament-image {
-            margin: auto;
-            max-width: 361px;
-            position: relative;
-            animation: bounceIn 1s 0.1s both;
-
-            @include breakpoint(xxl) {
-              max-width: 100%;
-            }
-          }
-
-          .heading {
-            font-family: Daybury;
-            font-weight: 500;
-
-            &__1 {
-              font-size: calc(47px + (90 - 47) * ((100vw - 300px) / (600 - 300)));
-              padding-bottom: 12px;
-              animation: text-shadow-pop-left 1s 1s both;
-
-              @include breakpoint(sm) {
-                font-size: 90px;
-              }
-            }
-
-            &__2 {
-              font-size: calc(24px + (40 - 24) * ((100vw - 300px) / (600 - 300)));
-              color: var(--brown-6);
-              border: 2px solid var(--brown-6);
-              display: inline-block;
-              border-radius: 10px;
-              background-color: rgb(0 0 0 / 18%);
-              padding: 9px 21px;
-              animation: text-shadow-pop-left 1s 1s both;
-
-              @include breakpoint(sm) {
-                font-size: 40px;
-              }
-            }
-          }
-
-          p.paragraph {
-            font-family: "Futura PT Book";
-            text-align: justify;
-            font-size: calc(16px + (19 - 16) * ((100vw - 300px) / (600 - 300)));
-            margin: 20px 0 20px 0;
-
-            @include breakpoint(sm) {
-              font-size: 19px;
-            }
-          }
-
-          .learn-more {
+          &__2 {
+            font-size: calc(24px + (40 - 24) * ((100vw - 300px) / (600 - 300)));
             color: var(--brown-6);
-            font-family: "Futura PT Book";
-            font-weight: 600;
-            text-align: start;
-            font-size: calc(16px + (19 - 16) * ((100vw - 300px) / (600 - 300)));
-            animation: focus-in-expand 1.5s 0s both;
+            border: 2px solid var(--brown-6);
+            display: inline-block;
+            border-radius: 10px;
+            background-color: rgb(0 0 0 / 18%);
+            padding: 9px 21px;
+            animation: text-shadow-pop-left 1s 1s both;
 
             @include breakpoint(sm) {
-              font-size: 18px;
-            }
-
-            @include breakpoint(xl) {
-              font-size: 20px;
-            }
-
-            cursor: pointer;
-            transition: all 0.2s;
-
-            &:hover {
-              transform: translateY(-3px);
+              font-size: 40px;
             }
           }
+        }
 
-          .hr-line {
-            margin: 35px 0px 22px 0px;
+        p.paragraph {
+          font-family: "Futura PT Book";
+          text-align: justify;
+          font-size: calc(16px + (19 - 16) * ((100vw - 300px) / (600 - 300)));
+          margin: 20px 0 20px 0;
+
+          @include breakpoint(sm) {
+            font-size: 19px;
           }
+        }
+
+        .learn-more {
+          color: var(--brown-6);
+          font-family: "Futura PT Book";
+          font-weight: 600;
+          text-align: start;
+          font-size: calc(16px + (19 - 16) * ((100vw - 300px) / (600 - 300)));
+          animation: focus-in-expand 1.5s 0s both;
+
+          @include breakpoint(sm) {
+            font-size: 18px;
+          }
+
+          @include breakpoint(xl) {
+            font-size: 20px;
+          }
+
+          cursor: pointer;
+          transition: all 0.2s;
+
+          &:hover {
+            transform: translateY(-3px);
+          }
+        }
+
+        .hr-line {
+          margin: 35px 0px 22px 0px;
         }
       }
     }
   }
-
   .buttons-container {
     display: flex;
     flex-wrap: wrap;
