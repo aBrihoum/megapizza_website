@@ -1,0 +1,18 @@
+<div class="slide-block {{ isSlideActive === 'true' ? 'active' : '' }}" id="slide-{{ slideID }}">
+  <div class="block-1">
+    <div class="header">
+      <h1 class="header__one">Venez Decouvrir Notre</h1>
+      <h1 class="header__two">PizzA</h1>
+      <h1 class="header__three">Base Crème Fraîche</h1>
+      <button class="btn btn-orange">
+        <img src="./assets/images/svg/pizza.svg" height="25" width="25" alt="icon-pizza" />
+        Commander
+      </button>
+    </div>
+  </div>
+  <div class="block-2">
+    <div class="pictures-container">
+      <ng-content select="[pieces]"></ng-content>
+    </div>
+  </div>
+</div>

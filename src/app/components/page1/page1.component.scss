@@ -1,0 +1,46 @@
+@import "/src/assets/css/media_queries";
+.main {
+  background-image: url("/assets/images/pages/1/background.webp");
+  animation: page_1 5s infinite;
+  position: relative;
+  background-repeat: repeat;
+  background-size: calc(600px + (1000 - 600) * ((100vw - 300px) / (1980 - 300)));
+  height: 100vh;
+
+  // thanks to : shapedivider.app
+  .custom-shape-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 55px;
+      @include breakpoint(md) {
+        height: 104px;
+      }
+    }
+    .shape-fill {
+      fill: #271b1b;
+    }
+  }
+}
+
+@keyframes page_1 {
+  0% {
+    background-position-y: 0px;
+  }
+
+  50% {
+    background-position-y: -30px;
+  }
+
+  100% {
+    background-position-y: 0px;
+  }
+}
