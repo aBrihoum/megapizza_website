@@ -8,10 +8,10 @@ import reviews from '../../../assets/json/reviews.json';
   templateUrl: './page5.component.html',
   styleUrls: ['./page5.component.scss'],
 })
-export class Page5Component implements OnInit {
-  constructor(public Shared: SharedService) {}
+export class Page5Component {
+  constructor(private SharedService: SharedService) {}
 
-  reviews: any[] = [];
+  reviews = reviews;
 
   slide: SwiperOptions = {
     slidesPerView: 'auto',
@@ -24,8 +24,7 @@ export class Page5Component implements OnInit {
     // grabCursor: true, // broken
     // autoplay: { delay: 2500, disableOnInteraction: false },
   };
-
-  ngOnInit(): void {
-    this.reviews = reviews;
+  jumpToSection(selector: string) {
+    this.SharedService.jumpToSection(selector);
   }
 }
