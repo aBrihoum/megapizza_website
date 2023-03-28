@@ -12,7 +12,6 @@ export class ModalComponent {
   @Output() closeModalEvent = new EventEmitter<void>();
 
   ngAfterViewInit() {
-    console.log('init');
     let modalEl = this.modal.nativeElement;
     let fct = (event: Event) => {
       if (!(modalEl as any).contains(event.target)) {
