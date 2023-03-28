@@ -7,10 +7,6 @@ declare var WOW: any;
   template: `
     <section>
       <app-page1></app-page1>
-      <app-page2></app-page2>
-      <app-page3></app-page3>
-      <app-page4></app-page4>
-      <app-page5></app-page5>
     </section>
   `,
 })
