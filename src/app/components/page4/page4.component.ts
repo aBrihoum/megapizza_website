@@ -1,7 +1,7 @@
 import { LightgalleryService } from '../../shared/services/lightgallery.service';
 import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
 import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
-import { SharedService } from 'src/app/shared/services/shared.service';
+import { SharedService } from 'src/app/shared/services/city.service';
 import { SlideTypesT } from 'src/app/shared/interfaces/slides.model';
 declare var Snackbar: any; // lazyloaded (check app.component)
 declare var Popper: any; // lazyloaded

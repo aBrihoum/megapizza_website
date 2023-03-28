@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SlideTypesT } from '../interfaces/slides.model';
-import { SharedService } from './shared.service';
+import { SharedService } from './city.service';
 
 declare let lightGallery: any;
 declare let lgThumbnail: any;

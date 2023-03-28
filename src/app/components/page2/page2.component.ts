@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
-import { SharedService } from 'src/app/shared/services/shared.service';
+import { SharedService } from 'src/app/shared/services/city.service';
 @Component({
   selector: 'app-page2',
   templateUrl: './page2.component.html',
