@@ -1,3 +1,4 @@
+import { CityI } from './../interfaces/city.model';
 import { Injectable } from '@angular/core';
 import CITYDATA_JSON from '../../../assets/json/city-data.json';
 import SLIDES_JSON from '../../../assets/json/slides.json';
@@ -8,7 +9,7 @@ import { MealTypesT, SlideI } from '../interfaces/slides.model';
 export class SharedService {
   constructor() {}
   // ? -------------------------------------------------
-  pickedCity = CITYDATA_JSON[0]; // pick the first city, cuz on this version, there's no city switcher
+  pickedCity = CITYDATA_JSON[0] as CityI; // pick the first city, cuz on this version, there's no city switcher
   pickedCityTowns = this.pickedCity.towns;
   pickedTown = this.pickedCityTowns[0];
   // ? -------------------------------------------------
