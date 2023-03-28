@@ -46,20 +46,20 @@ export class Page3Component {
   };
   // -----------------------------------------------------
   pickedMenuIndex = 0;
-  pickedMealCategory = this.SharedService.pickedMealCategory;
-  pickedMealCategoryMenu = this.SharedService.pickedMealCategoryMenu;
+  pickedMealCategory = this.SharedService.returnPickedMealCategory();
+  pickedMealCategoryMenu = this.SharedService.returnPickedMealCategoryMenu();
 
   changeMealCategory(cat: MealTypesT) {
     this.SharedService.changeMealCategory(cat);
-    this.pickedMealCategory = this.SharedService.pickedMealCategory;
-    this.pickedMealCategoryMenu = this.SharedService.pickedMealCategoryMenu;
+    this.pickedMealCategory = this.SharedService.returnPickedMealCategory();
+    this.pickedMealCategoryMenu = this.SharedService.returnPickedMealCategoryMenu();
     this.refresh();
   }
 
   changeMealCategoryMenu(index: number) {
     this.pickedMenuIndex = index;
     this.SharedService.changeMealCategoryMenu(index);
-    this.pickedMealCategoryMenu = this.SharedService.pickedMealCategoryMenu;
+    this.pickedMealCategoryMenu = this.SharedService.returnPickedMealCategoryMenu();
     this.refresh();
   }
 

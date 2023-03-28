@@ -12,7 +12,7 @@ export class Page2Component implements OnInit {
   @ViewChild('loadingSvg') loadingSvg!: ElementRef<HTMLImageElement>;
   constructor(private SharedService: SharedService, private ref: ChangeDetectorRef) {}
 
-  pickedCityTowns = this.SharedService.pickedCityTowns;
+  pickedCityTowns = this.SharedService.returnPickedCityTowns();
   pickedTown: TownI = {} as TownI;
   showModal = false;
 
@@ -31,7 +31,7 @@ export class Page2Component implements OnInit {
 
   ngOnInit() {
     // idk, i just hate the asyc pipe
-    this.SharedService.pickedTown$.subscribe((res) => {
+    this.SharedService.returnPickedTown().subscribe((res) => {
       this.pickedTown = res;
       this.ref.markForCheck();
     });

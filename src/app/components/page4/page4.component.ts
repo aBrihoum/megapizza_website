@@ -33,8 +33,8 @@ export class Page4Component {
     },
   };
 
-  pickedCity = this.SharedService.pickedCity;
-  pickedCityTowns = this.SharedService.pickedCityTowns;
+  pickedCity = this.SharedService.returnPickedCity();
+  pickedCityTowns = this.SharedService.returnPickedCityTowns();
   pickedTown: TownI = {} as TownI;
   showModal = false;
 
@@ -102,7 +102,7 @@ export class Page4Component {
   }
   ngOnInit() {
     // idk, i just hate the asyc pipe
-    this.SharedService.pickedTown$.subscribe((res) => {
+    this.SharedService.returnPickedTown().subscribe((res) => {
       this.pickedTown = res;
       this.ref.markForCheck();
     });

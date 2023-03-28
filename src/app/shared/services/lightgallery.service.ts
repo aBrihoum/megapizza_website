@@ -16,9 +16,9 @@ export class LightgalleryService {
 
   openGallery(imageNumber: number, type: SlideTypesT) {
     let tmp: any[] = [];
-    if (type === 'food') tmp = this.Shared.pickedMealCategory.slides;
-    else if (type === 'menus') tmp = this.Shared.pickedMealCategory.menu;
-    else if (type === 'buildings') tmp = this.Shared.pickedTown$.getValue().slides;
+    if (type === 'food') tmp = this.Shared.returnPickedMealCategory().slides;
+    else if (type === 'menus') tmp = this.Shared.returnPickedMealCategory().menu;
+    else if (type === 'buildings') tmp = this.Shared.returnPickedTown().getValue().slides;
     this.lgSlides = [];
     tmp.forEach((el) => {
       this.lgSlides.push({
