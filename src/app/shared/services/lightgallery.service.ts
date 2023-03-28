@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { GalleryTypeT } from '../interfaces/lightgallery.model';
+import { SlideTypesT } from '../interfaces/slides.model';
 import { SharedService } from './shared.service';
 
 declare let lightGallery: any;
@@ -15,7 +15,7 @@ export class LightgalleryService {
 
   lgSlides: any[] = [];
 
-  openGallery(imageNumber: number, type: GalleryTypeT) {
+  openGallery(imageNumber: number, type: SlideTypesT) {
     let tmp: any[] = [];
     if (type === 'food') tmp = this.Shared.pickedMealCategory.slides;
     else if (type === 'menus') tmp = this.Shared.pickedMealCategory.menu;

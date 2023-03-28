@@ -1,0 +1,13 @@
+<div class="modal-container">
+  <div class="modal" #modal>
+    <iframe
+      class="iframe"
+      title="YouTube video player"
+      frameborder="0"
+      [src]="videoUrl | safe"
+      allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    >
+    </iframe>
+  </div>
+</div>

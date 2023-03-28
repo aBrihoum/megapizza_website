@@ -10,6 +10,7 @@ import { Page5Component } from './components/page5/page5.component';
 import { SwiperModule } from 'swiper/angular';
 import { SafePipe } from './shared/pipes/safe.pipe';
 import { SlideComponent } from './shared/components/slide/slide.component';
+import { ModalComponent } from './shared/components/modal/modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { SlideComponent } from './shared/components/slide/slide.component';
     Page5Component,
     SafePipe,
     SlideComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,

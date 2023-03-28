@@ -1,15 +1,16 @@
 import { LightgalleryService } from '../../shared/services/lightgallery.service';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
 import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
 import { SharedService } from 'src/app/shared/services/shared.service';
-import { GalleryTypeT } from 'src/app/shared/interfaces/lightgallery.model';
-declare var Snackbar: any; // lazyloaded, cuz i really care about the bundle size man !
-declare var Popper: any; // lazyloaded, cuz i really care about the bundle size man !
+import { SlideTypesT } from 'src/app/shared/interfaces/slides.model';
+declare var Snackbar: any; // lazyloaded (check app.component)
+declare var Popper: any; // lazyloaded
 SwiperCore.use([Pagination]);
 @Component({
   selector: 'app-page4',
   templateUrl: './page4.component.html',
   styleUrls: ['./page4.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Page4Component {
   constructor(private SharedService: SharedService, private LgService: LightgalleryService) {}
@@ -30,21 +31,24 @@ export class Page4Component {
   pickedCity = this.SharedService.pickedCity;
   pickedCityTowns = this.SharedService.pickedCityTowns;
   pickedTown = this.SharedService.pickedTown;
+  showModal = false;
+
+  toggleModal() {
+    this.showModal = !this.showModal;
+  }
 
   changeTown(index: number) {
     this.SharedService.changeTown(index);
     this.pickedTown = this.SharedService.pickedTown;
     this.refresh();
   }
-  showModal() {
-    this.SharedService.showModal();
-  }
+
   refresh() {
     this.map.nativeElement.classList.remove('lazyloaded');
     this.map.nativeElement.classList.add('lazyload');
   }
 
-  openGallery(imgNumber: number, type: GalleryTypeT) {
+  openGallery(imgNumber: number, type: SlideTypesT) {
     this.LgService.openGallery(imgNumber, type);
   }
 
@@ -56,7 +60,7 @@ export class Page4Component {
     el.style.left = '-100vw';
     document.body.appendChild(el);
     el.select();
-    el.setSelectionRange(0, 99999); // for mobile devices
+    el.setSelectionRange(0, 99999);
     document.execCommand('copy');
     document.body.removeChild(el);
   }

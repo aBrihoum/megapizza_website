@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { SharedService } from 'src/app/shared/services/shared.service';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import SwiperCore, { Pagination, SwiperOptions, FreeMode } from 'swiper';
 SwiperCore.use([Pagination, FreeMode]);
 import reviews from '../../../assets/json/reviews.json';
@@ -7,12 +6,10 @@ import reviews from '../../../assets/json/reviews.json';
   selector: 'app-page5',
   templateUrl: './page5.component.html',
   styleUrls: ['./page5.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Page5Component {
-  constructor(private SharedService: SharedService) {}
-
   reviews = reviews;
-
   slide: SwiperOptions = {
     slidesPerView: 'auto',
     direction: 'vertical',
@@ -24,7 +21,8 @@ export class Page5Component {
     // grabCursor: true, // broken
     // autoplay: { delay: 2500, disableOnInteraction: false },
   };
+
   jumpToSection(selector: string) {
-    this.SharedService.jumpToSection(selector);
+    document.querySelector(selector)?.scrollIntoView({ behavior: 'smooth' });
   }
 }

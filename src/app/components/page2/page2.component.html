@@ -98,7 +98,7 @@
       <source type="video/mp4" />
     </video>
     <img
-      (click)="showModal()"
+      (click)="toggleModal()"
       src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
       data-src="./assets/images/svg/play.svg"
       alt="play Button"
@@ -108,3 +108,5 @@
     <img #loadingSvg class="loading-svg-c" src="./assets/images/svg/loading.svg" alt="loading" />
   </div>
 </section>
+
+<app-modal (closeModalEvent)="toggleModal()" [videoUrl]="pickedTown.youtube" *ngIf="showModal"></app-modal>

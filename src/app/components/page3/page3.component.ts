@@ -1,14 +1,15 @@
 import { LightgalleryService } from '../../shared/services/lightgallery.service';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
 import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
 import { SharedService } from 'src/app/shared/services/shared.service';
-import { GalleryTypeT } from 'src/app/shared/interfaces/lightgallery.model';
+import { MealTypesT, SlideTypesT } from 'src/app/shared/interfaces/slides.model';
 SwiperCore.use([Pagination]);
 //
 @Component({
   selector: 'app-page3',
   templateUrl: './page3.component.html',
   styleUrls: ['./page3.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Page3Component {
   constructor(private LgService: LightgalleryService, private SharedService: SharedService) {}
@@ -48,8 +49,7 @@ export class Page3Component {
   pickedMealCategory = this.SharedService.pickedMealCategory;
   pickedMealCategoryMenu = this.SharedService.pickedMealCategoryMenu;
 
-  changeMealCategory(cat: any) {
-    //@ to change latter (cat interface)
+  changeMealCategory(cat: MealTypesT) {
     this.SharedService.changeMealCategory(cat);
     this.pickedMealCategory = this.SharedService.pickedMealCategory;
     this.pickedMealCategoryMenu = this.SharedService.pickedMealCategoryMenu;
@@ -64,7 +64,7 @@ export class Page3Component {
   }
 
   jumpToSection(selector: string) {
-    this.SharedService.jumpToSection(selector);
+    document.querySelector(selector)?.scrollIntoView({ behavior: 'smooth' });
   }
 
   refresh() {
@@ -72,7 +72,7 @@ export class Page3Component {
     this.menu.nativeElement.classList.add('lazyload');
   }
 
-  openGallery(imgNumber: number, type: GalleryTypeT) {
+  openGallery(imgNumber: number, type: SlideTypesT) {
     this.LgService.openGallery(imgNumber, type);
   }
 
