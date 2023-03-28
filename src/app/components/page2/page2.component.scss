@@ -1,4 +1,5 @@
-@import "/src/assets/css/media_queries";
+@import "/src/assets/sass/media_queries";
+@import "/src/assets/sass/container_width";
 
 .main-block {
   padding-top: 60px;
@@ -27,7 +28,8 @@
     }
   }
 
-  .main-container {
+  .blocks-container {
+    @extend %container-width;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -197,9 +199,22 @@
             transform: translateY(-3px);
           }
         }
-
         .hr-line {
+          border-top: 2px solid var(--brown-5);
           margin: 35px 0px 22px 0px;
+
+          .square {
+            box-sizing: border-box;
+            width: 20px;
+            height: 20px;
+            margin: auto;
+            background: #2a1f1f;
+            border: 2px solid var(--brown-5);
+            outline: 5px solid #2a1f1f;
+            margin-top: -10px;
+            transform: rotate(45deg);
+            animation: roll-in-left-custom 4.5s 1.5s both;
+          }
         }
       }
     }

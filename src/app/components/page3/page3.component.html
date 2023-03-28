@@ -3,90 +3,90 @@
     <h1 class="wow">Menu</h1>
   </div>
 
-  <div class="menu-container">
-    <div class="block-1">
-      <div class="menu-pictures">
-        <div
-          data-remove-animation
-          class="picture wow"
-          [class.active]="pickedMealCategory.name === 'pizza'"
-          (click)="changeMealCategory('pizza')"
-        >
-          <img
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pages/3/pizza.webp"
-            alt="(La Méga Pizza) - Pizza"
-            class="img-res lazyload"
-          />
-          <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading" />
+  <div class="container">
+    <div class="menu-container">
+      <div class="block-1">
+        <div class="menu-pictures">
+          <div
+            data-remove-animation
+            class="picture wow"
+            [class.active]="pickedMealCategory.name === 'pizza'"
+            (click)="changeMealCategory('pizza')"
+          >
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+              data-src="./assets/images/pages/3/pizza.webp"
+              alt="(La Méga Pizza) - Pizza"
+              class="img-res lazyload"
+            />
+            <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading" />
+          </div>
+          <div
+            data-remove-animation
+            class="picture wow"
+            [class.active]="pickedMealCategory.name === 'tacos'"
+            (click)="changeMealCategory('tacos')"
+          >
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+              data-src="./assets/images/pages/3/tacos.webp"
+              alt="(La Méga Pizza) - Tacos"
+              class="img-res lazyload"
+            />
+            <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading" />
+          </div>
+          <div
+            data-remove-animation
+            class="picture wow"
+            [class.active]="pickedMealCategory.name === 'dessert'"
+            (click)="changeMealCategory('dessert')"
+          >
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+              data-src="./assets/images/pages/3/dessert.webp"
+              alt="(La Méga Pizza) - Dessert"
+              class="img-res lazyload"
+            />
+            <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading" />
+          </div>
         </div>
-        <div
-          data-remove-animation
-          class="picture wow"
-          [class.active]="pickedMealCategory.name === 'tacos'"
-          (click)="changeMealCategory('tacos')"
-        >
-          <img
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pages/3/tacos.webp"
-            alt="(La Méga Pizza) - Tacos"
-            class="img-res lazyload"
-          />
-          <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading" />
-        </div>
-        <div
-          data-remove-animation
-          class="picture wow"
-          [class.active]="pickedMealCategory.name === 'dessert'"
-          (click)="changeMealCategory('dessert')"
-        >
-          <img
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pages/3/dessert.webp"
-            alt="(La Méga Pizza) - Dessert"
-            class="img-res lazyload"
-          />
-          <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading" />
+        <hr class="c-hr" />
+        <div class="menu-titles">
+          <div class="title-container" (click)="changeMealCategory('pizza')">
+            <h2 [class.active]="pickedMealCategory.name === 'pizza'" class="title wow">Pizza</h2>
+          </div>
+          <div class="title-container" (click)="changeMealCategory('tacos')">
+            <h2 [class.active]="pickedMealCategory.name === 'tacos'" class="title wow">Tacos &#38; Soufflé</h2>
+          </div>
+          <div class="title-container" (click)="changeMealCategory('dessert')">
+            <h2 [class.active]="pickedMealCategory.name === 'dessert'" class="title wow">Dessert</h2>
+          </div>
         </div>
       </div>
-      <hr class="c-hr" />
-      <div class="menu-titles">
-        <div class="title-container" (click)="changeMealCategory('pizza')">
-          <h2 [class.active]="pickedMealCategory.name === 'pizza'" class="title wow">Pizza</h2>
-        </div>
-        <div class="title-container" (click)="changeMealCategory('tacos')">
-          <h2 [class.active]="pickedMealCategory.name === 'tacos'" class="title wow">Tacos &#38; Soufflé</h2>
-        </div>
-        <div class="title-container" (click)="changeMealCategory('dessert')">
-          <h2 [class.active]="pickedMealCategory.name === 'dessert'" class="title wow">Dessert</h2>
-        </div>
-      </div>
-    </div>
 
-    <div class="block-2">
-      <div class="slides-container" id="lg-slides">
-        <div class="title wow">
-          <span>Gallery &#8594;</span>
+      <div class="block-2">
+        <div class="slides-container" id="lg-slides">
+          <div class="title wow">
+            <span>Gallery &#8594;</span>
+          </div>
+          <swiper [config]="slide">
+            <ng-template swiperSlide *ngFor="let slide of pickedMealCategory.slides; let i = index">
+              <div class="slide-picture-container" (click)="openGallery(i, 'food')">
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                  [attr.data-src]="slide.path"
+                  alt="{{ slide.alt }}"
+                  class="img-res lazyload"
+                />
+                <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading" />
+              </div>
+              <p class="slide-title wow">{{ slide.title }}</p>
+            </ng-template>
+          </swiper>
         </div>
-        <swiper [config]="slide">
-          <ng-template swiperSlide *ngFor="let slide of pickedMealCategory.slides; let i = index">
-            <div class="slide-picture-container" (click)="openGallery(i, 'food')">
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-                [attr.data-src]="slide.path"
-                alt="{{ slide.alt }}"
-                class="img-res lazyload"
-              />
-              <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading" />
-            </div>
-            <p class="slide-title wow">{{ slide.title }}</p>
-          </ng-template>
-        </swiper>
       </div>
-    </div>
 
-    <div class="block-3">
-      <div class="container">
+      <div class="block-3">
         <div class="buttons-container">
           <ng-container *ngFor="let button of pickedMealCategory.menu; let i = index">
             <button

@@ -1,7 +1,8 @@
-@import "./assets/css/swiper.scss";
-@import "./assets/css/animations.scss";
-@import "./assets/css/pre-fonts.scss";
-@import "./assets/css/custom.scss";
+@import "./assets/sass/swiper.scss";
+@import "./assets/sass/animations.scss";
+@import "./assets/sass/pre-fonts.scss";
+@import "./assets/sass/global.scss";
+// yea, too lazy to use sass vars
 :root {
   --brown-1: #191414;
   --brown-2: #271b1b;

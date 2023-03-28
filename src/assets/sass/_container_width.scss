@@ -1,0 +1,23 @@
+%container-width {
+  width: 90%;
+  margin-inline: auto;
+  @include breakpoint(sm) {
+    width: 540px;
+  }
+
+  @include breakpoint(md) {
+    width: 720px;
+  }
+
+  @include breakpoint(lg) {
+    width: 960px;
+  }
+
+  @include breakpoint(xl) {
+    width: 1140px;
+  }
+
+  @include breakpoint(xxl) {
+    width: 1320px;
+  }
+}

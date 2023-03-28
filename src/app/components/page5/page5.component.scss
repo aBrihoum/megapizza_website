@@ -1,5 +1,5 @@
-@import "/src/assets/css/media_queries";
-
+@import "/src/assets/sass/media_queries";
+@import "/src/assets/sass/container_width";
 .main-block {
   // background-image: url(/assets/images/pages/5/background.webp);
   background-repeat: repeat;
@@ -115,160 +115,163 @@ img {
   }
 }
 
-.why-us-container {
-  padding: 7vh 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-
-  @include breakpoint(md) {
-    padding-bottom: 15vh;
-    text-align: start;
-    gap: 15px;
-    justify-content: space-between;
-  }
-
-  > .block-1,
-  > .block-2 {
-    width: 100%;
-    margin-top: 50px;
-    position: relative;
-
-    @include breakpoint(md) {
-      width: calc(50% - 15px);
-    }
-  }
-
-  > .block-1 {
-    order: 1;
-    animation: fadeIn 2s 0s both;
-
-    @include breakpoint(md) {
-      order: 0;
-    }
-  }
-}
-
-.reviews-container {
-  padding: 10vh 0;
-  text-align: center;
-  .slide-height {
-    min-height: 60vh !important;
-  }
-  @include breakpoint(md) {
-    padding: 15vh 0;
+.container {
+  @extend %container-width;
+  .why-us-container {
+    padding: 7vh 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     align-items: center;
-    text-align: start;
-    gap: 15px;
-    justify-content: space-between;
-  }
-
-  > .block-1,
-  > .block-2 {
-    width: 100%;
 
     @include breakpoint(md) {
-      width: calc(50% - 15px);
+      padding-bottom: 15vh;
+      text-align: start;
+      gap: 15px;
+      justify-content: space-between;
+    }
+
+    > .block-1,
+    > .block-2 {
+      width: 100%;
+      margin-top: 50px;
+      position: relative;
+
+      @include breakpoint(md) {
+        width: calc(50% - 15px);
+      }
+    }
+
+    > .block-1 {
+      order: 1;
+      animation: fadeIn 2s 0s both;
+
+      @include breakpoint(md) {
+        order: 0;
+      }
     }
   }
 
-  > .block-2 {
-    border-radius: 20px;
-    background-color: var(--glass);
-    position: relative;
-    font-family: "Futura PT Book";
-    text-align: justify;
-    cursor: grab;
-    position: relative;
-    margin-top: 60px;
-
-    @include breakpoint(md) {
-      margin-top: 0;
+  .reviews-container {
+    padding: 10vh 0;
+    text-align: center;
+    .slide-height {
+      min-height: 60vh !important;
     }
-
-    .review-block {
-      padding: 30px 25px;
+    @include breakpoint(md) {
+      padding: 15vh 0;
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
       align-items: center;
-      flex-direction: column;
+      text-align: start;
+      gap: 15px;
+      justify-content: space-between;
+    }
 
-      @include breakpoint(lg) {
-        padding: 30px 60px;
-        flex-direction: row;
+    > .block-1,
+    > .block-2 {
+      width: 100%;
+
+      @include breakpoint(md) {
+        width: calc(50% - 15px);
+      }
+    }
+
+    > .block-2 {
+      border-radius: 20px;
+      background-color: var(--glass);
+      position: relative;
+      font-family: "Futura PT Book";
+      text-align: justify;
+      cursor: grab;
+      position: relative;
+      margin-top: 60px;
+
+      @include breakpoint(md) {
+        margin-top: 0;
       }
 
-      .customer-pic {
-        max-width: 80px;
-        width: 100%;
-
-        > img {
-          border-radius: 50%;
-        }
-      }
-
-      .customer-name {
-        text-align: center;
-
-        @include breakpoint(md) {
-          margin-left: 30px;
-          text-align: start;
-        }
-
-        .customer-stars {
-          max-width: 120px;
-          width: 100%;
-          margin-top: 10px;
-        }
-      }
-
-      .fb-icon {
-        position: absolute;
-        top: 17px;
-        right: 17px;
-        width: 30px;
+      .review-block {
+        padding: 30px 25px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
 
         @include breakpoint(lg) {
-          margin-bottom: auto;
-          margin-left: auto;
-          position: relative;
+          padding: 30px 60px;
+          flex-direction: row;
         }
-      }
 
-      .custumer-review {
-        margin: 20px 0;
-        font-size: calc(18px + (21 - 18) * ((100vw - 300px) / (767 - 300)));
+        .customer-pic {
+          max-width: 80px;
+          width: 100%;
 
-        @include breakpoint(md) {
-          font-size: calc(18px + (21 - 18) * ((100vw - 767px) / (1980 - 300)));
+          > img {
+            border-radius: 50%;
+          }
+        }
+
+        .customer-name {
+          text-align: center;
+
+          @include breakpoint(md) {
+            margin-left: 30px;
+            text-align: start;
+          }
+
+          .customer-stars {
+            max-width: 120px;
+            width: 100%;
+            margin-top: 10px;
+          }
+        }
+
+        .fb-icon {
+          position: absolute;
+          top: 17px;
+          right: 17px;
+          width: 30px;
+
+          @include breakpoint(lg) {
+            margin-bottom: auto;
+            margin-left: auto;
+            position: relative;
+          }
+        }
+
+        .custumer-review {
+          margin: 20px 0;
+          font-size: calc(18px + (21 - 18) * ((100vw - 300px) / (767 - 300)));
+
+          @include breakpoint(md) {
+            font-size: calc(18px + (21 - 18) * ((100vw - 767px) / (1980 - 300)));
+          }
         }
       }
     }
   }
-}
 
-.best-ingredients-container {
-  padding: 10vh 0;
+  .best-ingredients-container {
+    padding: 10vh 0;
 
-  @include breakpoint(md) {
-    padding: 15vh 0;
-  }
+    @include breakpoint(md) {
+      padding: 15vh 0;
+    }
 
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-  .ing-picture-container {
-    margin-top: 45px;
-    position: relative;
-    animation: fadeIn 2s 0s both;
+    .ing-picture-container {
+      margin-top: 45px;
+      position: relative;
+      animation: fadeIn 2s 0s both;
+    }
   }
 }
 

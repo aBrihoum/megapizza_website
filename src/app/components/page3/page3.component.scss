@@ -1,5 +1,5 @@
-@import "/src/assets/css/media_queries";
-
+@import "/src/assets/sass/media_queries";
+@import "/src/assets/sass/container_width";
 .main-block {
   // background-image: url(/assets/images/pages/3/background.webp);
   background-repeat: repeat;
@@ -28,141 +28,140 @@
       animation: text-shadow-pop-left 1s 0.5s both;
     }
   }
+  .container {
+    @extend %container-width;
+    .menu-container {
+      width: 100%;
+      margin-inline: auto;
 
-  .menu-container {
-    width: 100%;
-    margin-inline: auto;
+      @include breakpoint(lg) {
+        width: 90%;
+      }
 
-    @include breakpoint(lg) {
-      width: 90%;
-    }
+      @include breakpoint(xl) {
+        width: 80%;
+      }
 
-    @include breakpoint(xl) {
-      width: 80%;
-    }
+      .block-1 {
+        border: 3px solid var(--brown-5);
+        border-radius: 20px;
+        background-color: var(--glass);
 
-    .block-1 {
-      border: 3px solid var(--brown-5);
-      border-radius: 20px;
-      background-color: var(--glass);
+        .menu-pictures {
+          display: flex;
+          justify-content: center;
+          padding: calc(26px + (34 - 26) * ((100vw - 300px) / (1980 - 300))) 0px
+            calc(0px + (6 - 0) * ((100vw - 300px) / (1980 - 300)));
 
-      .menu-pictures {
-        display: flex;
-        justify-content: center;
-        padding: calc(26px + (34 - 26) * ((100vw - 300px) / (1980 - 300))) 0px
-          calc(0px + (6 - 0) * ((100vw - 300px) / (1980 - 300)));
+          > .picture {
+            padding-inline: calc(0px + (25 - 0) * ((100vw - 300px) / (1980 - 300)));
+            transition: all 0.35s;
+            cursor: pointer;
+            width: 33.33333333333333333%;
+            position: relative;
+            animation: bounceIn 1.2s 0s both;
 
-        > .picture {
-          padding-inline: calc(0px + (25 - 0) * ((100vw - 300px) / (1980 - 300)));
-          transition: all 0.35s;
-          cursor: pointer;
-          width: 33.33333333333333333%;
-          position: relative;
-          animation: bounceIn 1.2s 0s both;
+            &.active {
+              transform: translateY(-10px);
+            }
 
-          &.active {
-            transform: translateY(-10px);
+            &:hover {
+              transform: translateY(-8px);
+            }
           }
+        }
 
-          &:hover {
-            transform: translateY(-8px);
+        hr.c-hr {
+          margin: 1rem 0;
+          color: inherit;
+          border: 0;
+          border-top: 1px solid var(--brown-5);
+        }
+
+        .menu-titles {
+          margin-bottom: 1rem;
+          display: flex;
+          justify-content: center;
+
+          .title-container {
+            width: 33.33333333%;
+            text-align: center;
+            .title {
+              font-family: "Daybury";
+              color: var(--brown-6);
+              font-weight: 500;
+              font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1980 - 300)));
+              margin: 0;
+              cursor: pointer;
+              transition: all 0.35s;
+              animation: focus-in-expand 1.5s 0s both;
+
+              &.active {
+                color: var(--orange);
+              }
+
+              &:hover {
+                color: var(--orange);
+                transform: translateY(-3px);
+              }
+            }
+            &:nth-child(2) {
+              border-right: 2px solid var(--brown-5);
+              border-left: 2px solid var(--brown-5);
+            }
           }
         }
       }
 
-      hr.c-hr {
-        margin: 1rem 0;
-        color: inherit;
-        border: 0;
-        border-top: 1px solid var(--brown-5);
-      }
+      .block-2 {
+        .slides-container {
+          padding-top: 70px;
 
-      .menu-titles {
-        margin-bottom: 1rem;
-        display: flex;
-        justify-content: center;
-
-        .title-container {
-          width: 33.33333333%;
-          text-align: center;
           .title {
             font-family: "Daybury";
             color: var(--brown-6);
-            font-weight: 500;
-            font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1980 - 300)));
-            margin: 0;
-            cursor: pointer;
-            transition: all 0.35s;
-            animation: focus-in-expand 1.5s 0s both;
+            text-align: end;
+            margin-bottom: 10px;
+            animation: bounceInDown 1.5s 0s both;
 
-            &.active {
-              color: var(--orange);
-            }
+            span {
+              display: inline-block;
+              transition: all 0.3s;
 
-            &:hover {
-              color: var(--orange);
-              transform: translateY(-3px);
+              &:hover {
+                transform: translateY(-6px);
+                color: var(--orange);
+                cursor: pointer;
+              }
             }
           }
-          &:nth-child(2) {
-            border-right: 2px solid var(--brown-5);
-            border-left: 2px solid var(--brown-5);
-          }
-        }
-      }
-    }
 
-    .block-2 {
-      .slides-container {
-        padding-top: 70px;
-
-        .title {
-          font-family: "Daybury";
-          color: var(--brown-6);
-          text-align: end;
-          margin-bottom: 10px;
-          animation: bounceInDown 1.5s 0s both;
-
-          span {
-            display: inline-block;
+          .slide-picture-container {
+            border: 2px solid var(--brown-5);
+            border-radius: 20px;
+            background-color: var(--glass);
+            padding: 10px;
             transition: all 0.3s;
+            cursor: zoom-in;
+            position: relative;
 
             &:hover {
-              transform: translateY(-6px);
-              color: var(--orange);
-              cursor: pointer;
+              box-shadow: 0px 0px 9px 1px rgba(240, 215, 184, 0.471);
+              transform: scale(0.98);
             }
           }
-        }
 
-        .slide-picture-container {
-          border: 2px solid var(--brown-5);
-          border-radius: 20px;
-          background-color: var(--glass);
-          padding: 10px;
-          transition: all 0.3s;
-          cursor: zoom-in;
-          position: relative;
-
-          &:hover {
-            box-shadow: 0px 0px 9px 1px rgba(240, 215, 184, 0.471);
-            transform: scale(0.98);
+          .slide-title {
+            font-family: "Daybury";
+            color: var(--brown-6);
+            padding: 26px 0 60px;
+            text-align: center;
+            animation: focus-in-expand 1.5s 0s both;
           }
         }
-
-        .slide-title {
-          font-family: "Daybury";
-          color: var(--brown-6);
-          padding: 26px 0 60px;
-          text-align: center;
-          animation: focus-in-expand 1.5s 0s both;
-        }
       }
-    }
 
-    .block-3 {
-      .container {
-        // .container is a global class
+      .block-3 {
         border-radius: 20px;
         background-color: var(--glass);
         margin-inline: auto;
