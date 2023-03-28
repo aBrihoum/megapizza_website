@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { SlideTypesT } from '../interfaces/slides.model';
 import { SharedService } from './city.service';
-
 declare let lightGallery: any;
 declare let lgThumbnail: any;
 declare let lgZoom: any;
@@ -19,7 +18,7 @@ export class LightgalleryService {
     let tmp: any[] = [];
     if (type === 'food') tmp = this.Shared.pickedMealCategory.slides;
     else if (type === 'menus') tmp = this.Shared.pickedMealCategory.menu;
-    else if (type === 'buildings') tmp = this.Shared.pickedTown.slides;
+    else if (type === 'buildings') tmp = this.Shared.pickedTown$.getValue().slides;
     this.lgSlides = [];
     tmp.forEach((el) => {
       this.lgSlides.push({

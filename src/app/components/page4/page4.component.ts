@@ -1,8 +1,9 @@
 import { LightgalleryService } from '../../shared/services/lightgallery.service';
-import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
 import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
 import { SharedService } from 'src/app/shared/services/city.service';
 import { SlideTypesT } from 'src/app/shared/interfaces/slides.model';
+import { TownI } from 'src/app/shared/interfaces/city.model';
 declare var Snackbar: any; // lazyloaded (check app.component)
 declare var Popper: any; // lazyloaded
 SwiperCore.use([Pagination]);
@@ -13,7 +14,11 @@ SwiperCore.use([Pagination]);
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Page4Component {
-  constructor(private SharedService: SharedService, private LgService: LightgalleryService) {}
+  constructor(
+    private SharedService: SharedService,
+    private LgService: LightgalleryService,
+    private ref: ChangeDetectorRef
+  ) {}
   @ViewChild('map') map!: ElementRef<HTMLDivElement>;
 
   slide: SwiperOptions = {
@@ -30,7 +35,7 @@ export class Page4Component {
 
   pickedCity = this.SharedService.pickedCity;
   pickedCityTowns = this.SharedService.pickedCityTowns;
-  pickedTown = this.SharedService.pickedTown;
+  pickedTown: TownI = {} as TownI;
   showModal = false;
 
   toggleModal() {
@@ -39,7 +44,6 @@ export class Page4Component {
 
   changeTown(index: number) {
     this.SharedService.changeTown(index);
-    this.pickedTown = this.SharedService.pickedTown;
     this.refresh();
   }
 
@@ -95,5 +99,12 @@ export class Page4Component {
         (el) => (el.style.display = 'none')
       );
     console.log('here');
+  }
+  ngOnInit() {
+    // idk, i just hate the asyc pipe
+    this.SharedService.pickedTown$.subscribe((res) => {
+      this.pickedTown = res;
+      this.ref.markForCheck();
+    });
   }
 }

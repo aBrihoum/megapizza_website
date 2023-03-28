@@ -1,3 +1,4 @@
+import { BehaviorSubject } from 'rxjs';
 import { CityI } from './../interfaces/city.model';
 import { Injectable } from '@angular/core';
 import CITYDATA_JSON from '../../../assets/json/city-data.json';
@@ -11,7 +12,7 @@ export class SharedService {
   // ? -------------------------------------------------
   pickedCity = CITYDATA_JSON[0] as CityI; // pick the first city, cuz on this version, there's no city switcher
   pickedCityTowns = this.pickedCity.towns;
-  pickedTown = this.pickedCityTowns[0];
+  pickedTown$ = new BehaviorSubject(this.pickedCityTowns[0]);
   // ? -------------------------------------------------
   slides = SLIDES_JSON as SlideI[];
   pickedMealCategory: SlideI = this.slides[0];
@@ -27,6 +28,6 @@ export class SharedService {
   }
 
   changeTown(index: number) {
-    this.pickedTown = this.pickedCityTowns[index];
+    this.pickedTown$.next(this.pickedCityTowns[index]);
   }
 }
