@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 // import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
 //@ts-ignore
 import * as WOW from 'wow.js/dist/wow.js';
+//@ts-ignore
+import 'bootstrap';
 @Component({
   selector: 'app-root',
   template: `
