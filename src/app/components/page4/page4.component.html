@@ -40,7 +40,7 @@
             <div class="image-container wow" (click)="openGallery(i, 'buildings')">
               <img
                 data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-                [attr.data-src]="slide.path"
+                [src]="slide.path"
                 alt="{{ slide.alt }}"
                 class="img-res lazyload"
               />
@@ -124,7 +124,7 @@
             <img
               #map
               data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
-              [attr.data-src]="pickedTown.mapPic"
+              [src]="pickedTown.mapPic"
               class="img-res lazyload"
               alt="(La Méga Pizza) - {{ pickedCity.name }}, {{ pickedTown.name }} - Google map"
             />

@@ -74,7 +74,7 @@
               <div class="slide-picture-container" (click)="openGallery(i, 'food')">
                 <img
                   data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-                  [attr.data-src]="slide.path"
+                  [src]="slide.path"
                   alt="{{ slide.alt }}"
                   class="img-res lazyload"
                 />
@@ -132,7 +132,7 @@
             #menu
             (click)="openGallery(pickedMenuIndex, 'menus')"
             data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            [attr.data-src]="pickedMealCategoryMenu.path_min"
+            [src]="pickedMealCategoryMenu.path_min"
             class="img-res menu-image lazyload wow"
             alt="{{ pickedMealCategoryMenu.alt }}"
           />
