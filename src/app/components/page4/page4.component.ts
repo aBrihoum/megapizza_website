@@ -4,8 +4,8 @@ import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
 import { SharedService } from 'src/app/shared/services/city.service';
 import { SlideTypesT } from 'src/app/shared/interfaces/slides.model';
 import { TownI } from 'src/app/shared/interfaces/city.model';
-declare var Snackbar: any; // lazyloaded (check app.component)
-declare var Popper: any; // lazyloaded
+import * as Popper from '@popperjs/core';
+import Snackbar from 'node-snackbar';
 SwiperCore.use([Pagination]);
 @Component({
   selector: 'app-page4',

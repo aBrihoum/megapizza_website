@@ -1,21 +1,14 @@
-/* thats weird, if i change the url to only 'DayburyRegular', and remove /assets..., the browser will re-download
-the font ( i guess because inside index.html, we preloaded the font with the /assets... url
-https://prnt.sc/AzGKqFS7mJla
-*/
-/* @font-face {
+@font-face {
   font-family: "Daybury";
-  src: local("Daybury"), local("DayburyRegular"),
-    url("/assets/fonts/DayburyRegular.woff2") format("woff2"),
+  src: local("Daybury"), local("DayburyRegular"), url("/assets/fonts/DayburyRegular.woff2") format("woff2"),
     url("/assets/fonts/DayburyRegular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-} */
-/* preloaded */
+}
 @font-face {
   font-family: "Futura PT Book";
-  src: url("FuturaPT-Book.woff2") format("woff2"),
-    url("FuturaPT-Book.woff") format("woff");
+  src: url("FuturaPT-Book.woff2") format("woff2"), url("FuturaPT-Book.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -23,8 +16,7 @@ https://prnt.sc/AzGKqFS7mJla
 
 @font-face {
   font-family: "Buckerley";
-  src: url("Buckerley.woff2") format("woff2"),
-    url("Buckerley.woff") format("woff");
+  src: url("Buckerley.woff2") format("woff2"), url("Buckerley.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

@@ -1,0 +1,20 @@
+//@ [bootstrap]
+@import "~bootstrap/scss/bootstrap";
+//@ [snackbar]
+@import "~node-snackbar/dist/snackbar.css";
+//@ [lightGallery]
+@import "~lightgallery/scss/lightgallery-core";
+@import "~lightgallery/scss/lg-fonts";
+@import "~lightgallery/scss/lg-theme-default";
+@import "~lightgallery/scss/lg-zoom";
+@import "~lightgallery/scss/lg-thumbnail";
+@import "~lightgallery/scss/lg-rotate";
+//@ [swiperJs]
+@import "swiper/scss";
+@import "swiper/scss/pagination";
+//@ [fonts]
+@import "./assets/fonts/fonts.css";
+//@ [animations]
+@import "./assets/sass/animations.scss";
+//@ [global custom styles]
+@import "./assets/sass/global.scss";

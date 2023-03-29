@@ -17,5 +17,7 @@
     ".gitignore": true,
     "tmp": true,
     "readme-src": true
-  }
+  },
+  "cSpell.enableFiletypes": ["!css", "!scss"],
+  "cSpell.enabled": false
 }

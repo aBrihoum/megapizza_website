@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { SlideTypesT } from '../interfaces/slides.model';
 import { SharedService } from './city.service';
-declare let lightGallery: any;
-declare let lgThumbnail: any;
-declare let lgZoom: any;
-declare let lgRotate: any;
+//
+import lightGallery from 'lightgallery';
+// Plugins
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import lgZoom from 'lightgallery/plugins/zoom';
+import lgRotate from 'lightgallery/plugins/rotate';
 
 @Injectable({
   providedIn: 'root',

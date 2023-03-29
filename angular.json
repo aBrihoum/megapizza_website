@@ -23,52 +23,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/assets",
-              "src/robots.txt"
-            ],
-            "styles": [
-              {
-                "input": "src/late_styles.scss",
-                "inject": false,
-                "bundleName": "late_styles"
-              },
-              {
-                "input": "src/pre_styles.scss",
-                "inject": false,
-                "bundleName": "pre_styles"
-              }
-            ],
-            "scripts": [
-              {
-                "input": "node_modules/@popperjs/core/dist/umd/popper.js",
-                "inject": false
-              },
-              {
-                "input": "node_modules/node-snackbar/dist/snackbar.js",
-                "inject": false
-              },
-              {
-                "input": "node_modules/lightgallery/lightgallery.umd.js",
-                "inject": false
-              },
-              {
-                "input": "node_modules/lightgallery/plugins/rotate/lg-rotate.umd.js",
-                "inject": false
-              },
-              {
-                "input": "node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js",
-                "inject": false
-              },
-              {
-                "input": "node_modules/lightgallery/plugins/zoom/lg-zoom.umd.js",
-                "inject": false
-              },
-              {
-                "input": "node_modules/wow.js/dist/wow.js",
-                "inject": false
-              }
-            ]
+            "assets": ["src/assets", "src/robots.txt"],
+            "styles": ["src/styles.scss"]
           },
           "configurations": {
             "production": {
@@ -129,12 +85,8 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
