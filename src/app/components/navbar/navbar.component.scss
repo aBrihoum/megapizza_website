@@ -1,0 +1,26 @@
+.nav-item-active {
+  opacity: 1 !important;
+}
+
+.nav-item-color {
+  color: white;
+  opacity: 0.6;
+  transition: all 0.2s;
+}
+
+.nav-item-color:hover {
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+.lborder {
+  border-left: 1px solid rgba(255, 255, 255, 0.281);
+}
+.navbar-bg {
+  background-color: rgb(15 11 11 / 45%);
+  border-radius: 0px 0px 19px 19px;
+}
+.navbar-toggler {
+  cursor: pointer;
+}
+@import "./res.scss";

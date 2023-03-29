@@ -1,0 +1,69 @@
+<nav #nav class="navbar navbar-expand-xl navbar-dark">
+  <div class="container-fluid">
+    <!-- toggle button -->
+    <button
+      #btn
+      (click)="navbar(btn, nav)"
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navMobileBtn"
+      aria-controls="navMobileBtn"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- toggle button -->
+    <div class="collapse navbar-collapse" id="navMobileBtn">
+      <ul class="navbar-nav me-auto _c-navbar-nav">
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-auto">
+          <a class="nav-link nav-item-color nav-item-active" href="#">
+            <img src="./assets/images/svg/home.svg" alt="home-icon" width="25" />
+            Accueil</a
+          >
+        </li>
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-auto">
+          <a class="nav-link nav-item-color" href="#">
+            <img src="./assets/images/svg/menu.svg" alt="menu-icon" width="25" /> Menu</a
+          >
+        </li>
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-auto">
+          <a class="nav-link nav-item-color" href="#">
+            <img src="./assets/images/svg/gallery.svg" alt="gallery-icon" width="25" /> Gallery</a
+          >
+        </li>
+        <li class="nav-item col-12 col-sm-6 col-lg-3 col-xl-auto">
+          <a class="nav-link nav-item-color" href="#"
+            ><img src="./assets/images/svg/map.svg" alt="map-icon" width="25" /> Find us</a
+          >
+        </li>
+      </ul>
+      <hr class="d-block d-xl-none" />
+      <ul class="navbar-nav ms-auto _c-navbar-nav text-center">
+        <li class="nav-item px-1 col-6 col-md-4 col-xl-auto _c-row">
+          <button class="btn btn-orange _c-btn">
+            <img src="./assets/images/svg/pizza.svg" height="25" width="25" alt="icon-pizza" class="icons" />
+            Quick order
+          </button>
+        </li>
+        <li class="nav-item px-1 col-6 col-md-4 col-xl-auto _c-row">
+          <button class="btn btn-brown-6 _c-btn">
+            <img src="./assets/images/svg/contact.svg" height="25" width="25" alt="icon-pizza" class="icons" />
+            Contact us
+          </button>
+        </li>
+        <li class="nav-item col-6 col-xl-auto ms-xl-1 lborder _c-row-2">
+          <a class="nav-link nav-item-color py-1" href="#"
+            ><img src="./assets/images/svg/fb.svg" alt="map-icon" width="35"
+          /></a>
+        </li>
+        <li class="nav-item col-6 col-xl-auto _c-row-2">
+          <a class="nav-link nav-item-color py-1" href="#"
+            ><img src="./assets/images/svg/ig.svg" alt="map-icon" width="35"
+          /></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -85,6 +85,7 @@
 
   &:hover {
     color: var(--orange);
+    border: 2px solid var(--orange);
     border-bottom: 6px solid var(--orange);
   }
 }
@@ -96,6 +97,7 @@
 
   &:hover {
     color: var(--brown-6);
+    border: 2px solid var(--brown-6);
     border-bottom: 6px solid var(--brown-6);
   }
 }

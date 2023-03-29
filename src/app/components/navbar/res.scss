@@ -1,0 +1,30 @@
+@media (max-width: 1199.98px) {
+  ._c-navbar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+  }
+  ._c-btn {
+    width: 100%;
+  }
+  .lborder {
+    border: 0;
+  }
+}
+@media (min-width: 366px) and (max-width: 1199.98px) {
+  ._c-row-2 {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 366px) {
+  ._c-row {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 575.98px) {
+  ._c-navbar-nav {
+    text-align: start;
+  }
+}
