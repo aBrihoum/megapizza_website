@@ -14,8 +14,8 @@
             (click)="changeMealCategory('pizza')"
           >
             <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-              data-src="./assets/images/pages/3/pizza.webp"
+              data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+              src="./assets/images/pages/3/pizza.webp"
               alt="(La Méga Pizza) - Pizza"
               class="img-res lazyload"
             />
@@ -28,8 +28,8 @@
             (click)="changeMealCategory('tacos')"
           >
             <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-              data-src="./assets/images/pages/3/tacos.webp"
+              data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+              src="./assets/images/pages/3/tacos.webp"
               alt="(La Méga Pizza) - Tacos"
               class="img-res lazyload"
             />
@@ -42,8 +42,8 @@
             (click)="changeMealCategory('dessert')"
           >
             <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-              data-src="./assets/images/pages/3/dessert.webp"
+              data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+              src="./assets/images/pages/3/dessert.webp"
               alt="(La Méga Pizza) - Dessert"
               class="img-res lazyload"
             />
@@ -73,7 +73,7 @@
             <ng-template swiperSlide *ngFor="let slide of pickedMealCategory.slides; let i = index">
               <div class="slide-picture-container" (click)="openGallery(i, 'food')">
                 <img
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                  data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
                   [attr.data-src]="slide.path"
                   alt="{{ slide.alt }}"
                   class="img-res lazyload"
@@ -102,8 +102,8 @@
         <div class="ornament-picture wow">
           <img
             class="img-res lazyload"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAABCAQAAAC4AnxFAAAAC0lEQVR42mNkQAEAAB4AAiZVyN4AAAAASUVORK5CYII="
-            data-src="./assets/images/pieces/c-ornament-2.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAABCAQAAAC4AnxFAAAAC0lEQVR42mNkQAEAAB4AAiZVyN4AAAAASUVORK5CYII="
+            src="./assets/images/pieces/c-ornament-2.webp"
             alt="ornament"
           />
           <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading" />
@@ -114,16 +114,16 @@
             <img
               data-remove-animation
               (click)="link.download(pickedMealCategoryMenu.path, pickedMealCategoryMenu.alt)"
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-              data-src="./assets/images/svg/dl.svg"
+              data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+              src="./assets/images/svg/dl.svg"
               alt="dl"
               class="icon lazyload dl wow"
             />
             <img
               data-remove-animation
               (click)="link.open(pickedMealCategoryMenu.path)"
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-              data-src="./assets/images/svg/link.svg"
+              data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+              src="./assets/images/svg/link.svg"
               alt="dl"
               class="icon lazyload link wow"
             />
@@ -131,7 +131,7 @@
           <img
             #menu
             (click)="openGallery(pickedMenuIndex, 'menus')"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
             [attr.data-src]="pickedMealCategoryMenu.path_min"
             class="img-res menu-image lazyload wow"
             alt="{{ pickedMealCategoryMenu.alt }}"
@@ -165,28 +165,28 @@
         <div class="pieces">
           <img
             class="top lazyload"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pieces/herb-6.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pieces/herb-6.webp"
             alt="herb"
           />
           <img
             class="rotating lazyload"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pieces/lemon.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pieces/lemon.webp"
             alt="lemon"
           />
           <img
             class="btm lazyload"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pieces/herb-10.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pieces/herb-10.webp"
             alt="herb"
           />
         </div>
         <div class="step-1">
           <img
             class="img-res lazyload"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pages/3/steps/1.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pages/3/steps/1.webp"
             alt="(La Méga Pizza) - Livraison étape 1"
           />
           <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading" />
@@ -202,28 +202,28 @@
         <div class="pieces">
           <img
             class="top left lazyload"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pieces/olives-2.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pieces/olives-2.webp"
             alt="herb"
           />
           <img
             class="rotating left lazyload"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pieces/tomato-slice.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pieces/tomato-slice.webp"
             alt="lemon"
           />
           <img
             class="btm left lazyload"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pieces/olives-3.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pieces/olives-3.webp"
             alt="herb"
           />
         </div>
         <div class="step-2">
           <img
             class="img-res lazyload"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pages/3/steps/2.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pages/3/steps/2.webp"
             alt="(La Méga Pizza) - Livraison étape 2"
           />
           <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading" />
@@ -239,28 +239,28 @@
         <div class="pieces">
           <img
             class="top lazyload"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pieces/herb-6.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pieces/herb-6.webp"
             alt="herb"
           />
           <img
             class="rotating lazyload"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pieces/lemon.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pieces/lemon.webp"
             alt="lemon"
           />
           <img
             class="btm lazyload"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pieces/herb-10.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pieces/herb-10.webp"
             alt="herb"
           />
         </div>
         <div class="step-3">
           <img
             class="img-res lazyload"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pages/3/steps/3.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pages/3/steps/3.webp"
             alt="(La Méga Pizza) - Livraison étape 3"
           />
           <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading" />
@@ -273,20 +273,20 @@
         <div class="bg nb rotate lazyload" data-bg="assets/images/svg/one-2.svg"></div>
         <div class="pieces">
           <img
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pieces/olives-2.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pieces/olives-2.webp"
             alt="herb"
             class="top left lazyload"
           />
           <img
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pieces/tomato-slice.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pieces/tomato-slice.webp"
             alt="lemon"
             class="rotating left lazyload"
           />
           <img
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pieces/olives-3.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pieces/olives-3.webp"
             alt="herb"
             class="btm left lazyload"
           />
@@ -294,8 +294,8 @@
         <div class="step-4">
           <img
             class="img-res lazyload lazyload"
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-            data-src="./assets/images/pages/3/steps/4.webp"
+            data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+            src="./assets/images/pages/3/steps/4.webp"
             alt="(La Méga Pizza) - Livraison étape 4"
           />
           <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading" />

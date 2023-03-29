@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import 'lazysizes';
-import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
+// import 'lazysizes';
+// import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
 //@ts-ignore
 import * as WOW from 'wow.js/dist/wow.js';
 @Component({

@@ -5,8 +5,8 @@
 
   <div class="towns-container">
     <img
-      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-      data-src="./assets/images/svg/pin.svg"
+      data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+      src="./assets/images/svg/pin.svg"
       alt="pin"
       class="lazyload pin-icon wow"
     />
@@ -25,8 +25,8 @@
     </div>
     <img
       (click)="toggleModal()"
-      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-      data-src="./assets/images/svg/play.svg"
+      data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+      src="./assets/images/svg/play.svg"
       alt="Play Button"
       class="play-button lazyload w-auto"
     />
@@ -39,7 +39,7 @@
           <ng-template swiperSlide *ngFor="let slide of pickedTown.slides; let i = index">
             <div class="image-container wow" (click)="openGallery(i, 'buildings')">
               <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+                data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
                 [attr.data-src]="slide.path"
                 alt="{{ slide.alt }}"
                 class="img-res lazyload"
@@ -52,8 +52,8 @@
       <div class="container-two">
         <h1 class="heading text-1 hr-text wow">La Méga Pizza</h1>
         <img
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-          data-src="./assets/images/svg/map-red.svg"
+          data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+          src="./assets/images/svg/map-red.svg"
           alt="map"
           class="map-icon lazyload wow"
         />
@@ -95,8 +95,8 @@
           <div class="image-container">
             <a [href]="pickedTown.fb" target="_blank" rel="noopener noreferrer">
               <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                data-src="./assets/images/pages/4/fb.webp"
+                data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                src="./assets/images/pages/4/fb.webp"
                 class="img-res lazyload"
                 alt="(La Méga Pizza) - {{ pickedCity.name }}, {{ pickedTown.name }} - Facebook"
               />
@@ -108,8 +108,8 @@
           <div class="image-container">
             <a [href]="pickedTown.ig" target="_blank" rel="noopener noreferrer">
               <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-                data-src="./assets/images/pages/4/ig.webp"
+                data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                src="./assets/images/pages/4/ig.webp"
                 class="img-res lazyload"
                 alt="(La Méga Pizza) - {{ pickedCity.name }}, {{ pickedTown.name }} - Instagram"
               />
@@ -123,7 +123,7 @@
           <a [href]="pickedTown.map" target="_blank" rel="noopener noreferrer" class="d-flex">
             <img
               #map
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
+              data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAABCAQAAABeK7cBAAAAC0lEQVR42mNkAAIAAAoAAv/lxKUAAAAASUVORK5CYII="
               [attr.data-src]="pickedTown.mapPic"
               class="img-res lazyload"
               alt="(La Méga Pizza) - {{ pickedCity.name }}, {{ pickedTown.name }} - Google map"
