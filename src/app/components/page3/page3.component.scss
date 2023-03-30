@@ -1,7 +1,7 @@
 @import "/src/assets/sass/media_queries";
 @import "/src/assets/sass/container_width";
 .main-block {
-  // background-image: url(/assets/images/pages/3/background.webp);
+  background-image: url(/assets/images/pages/3/background.webp);
   background-repeat: repeat;
   animation: page_3 4.5s infinite;
   background-color: var(--brown-1);
@@ -272,13 +272,14 @@
     &.text-1 {
       background-color: #cc9c68;
       color: #372e1c;
-      font-size: calc(40px + (80 - 45) * ((100vw - 300px) / (1980 - 300)));
       padding: 30px 0;
+      > h1 {
+        font-size: calc(40px + (80 - 45) * ((100vw - 300px) / (1980 - 300))) !important;
+      }
     }
 
     &.text-2 {
       font-size: calc(30px + (80 - 45) * ((100vw - 300px) / (1980 - 300)));
-
       > .underline {
         text-decoration: underline;
         cursor: pointer;
@@ -301,7 +302,7 @@
     justify-content: space-evenly;
 
     .bg {
-      // background: url("/assets/images/svg/one-2.svg");
+      background: url("/assets/images/svg/one-2.svg");
       background-size: contain;
       background-repeat: no-repeat;
       animation: bg 5s infinite;
