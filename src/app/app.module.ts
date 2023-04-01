@@ -9,8 +9,8 @@ import { Page3Component } from './components/page3/page3.component';
 import { Page5Component } from './components/page5/page5.component';
 import { Page4Component } from './components/page4/page4.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { RouterModule, Routes } from '@angular/router';
-const routes: Routes = [];
+// import { RouterModule, Routes } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +21,7 @@ const routes: Routes = [];
     Page5Component,
     NavbarComponent,
   ],
-  imports: [RouterModule.forRoot(routes), BrowserModule, SwiperModule, SharedModule],
+  imports: [BrowserModule, SwiperModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })
