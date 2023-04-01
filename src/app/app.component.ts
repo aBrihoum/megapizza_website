@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-// import 'lazysizes';
-// import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
+
 //@ts-ignore
-import * as WOW from 'wow.js/dist/wow.js';
+// import * as WOW from 'wow.js/dist/wow.js';
+declare var WOW: any;
 //@ts-ignore
-import 'bootstrap';
+// import 'bootstrap';
 @Component({
   selector: 'app-root',
   template: `
@@ -19,24 +19,30 @@ import 'bootstrap';
 })
 export class AppComponent {
   ngAfterContentInit() {
-    // * WOWjs
-    var wow = new WOW({
-      callback: function (el: HTMLElement) {
-        if (el.dataset['removeAnimation'] != undefined) setTimeout(() => (el.style.animationName = 'none'), 2000);
-      },
-    });
-    wow.init();
-    // * lazysies _ lazyload
-    document.addEventListener('lazybeforeunveil', function (e: any) {
-      let bg = e.target?.getAttribute('data-bg');
-      let video = e.target?.hasAttribute('autoplay');
-      if (bg) {
-        e.target.style.backgroundImage = 'url(' + bg + ')';
-      }
-      if (video) {
-        e.target.muted = true;
-        e.target.load();
-      }
-    });
+    window.onload = () => {
+      appendScript('popper.js');
+      appendScript('bootstrap.js');
+      appendScript('wow.js', true);
+      appendScript('snackbar.js');
+      appendScript('lightgallery.umd.js');
+      appendScript('lg-zoom.umd.js');
+      appendScript('lg-thumbnail.umd.js');
+      appendScript('lg-rotate.umd.js');
+    };
+    function appendScript(name: string, init?: boolean) {
+      let script = document.createElement('script');
+      script.src = name;
+      script.async = true;
+      document.head.appendChild(script);
+      if (init)
+        script.addEventListener('load', () => {
+          var wow = new WOW({
+            callback: function (el: HTMLElement) {
+              if (el.dataset['removeAnimation'] != undefined) setTimeout(() => (el.style.animationName = 'none'), 2000);
+            },
+          });
+          wow.init();
+        });
+    }
   }
 }

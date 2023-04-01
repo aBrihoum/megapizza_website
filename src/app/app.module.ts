@@ -9,9 +9,19 @@ import { Page3Component } from './components/page3/page3.component';
 import { Page5Component } from './components/page5/page5.component';
 import { Page4Component } from './components/page4/page4.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { RouterModule, Routes } from '@angular/router';
+const routes: Routes = [];
 @NgModule({
-  declarations: [AppComponent, Page1Component, Page2Component, Page3Component, Page4Component, Page5Component, NavbarComponent],
-  imports: [BrowserModule, SwiperModule, SharedModule],
+  declarations: [
+    AppComponent,
+    Page1Component,
+    Page2Component,
+    Page3Component,
+    Page4Component,
+    Page5Component,
+    NavbarComponent,
+  ],
+  imports: [RouterModule.forRoot(routes), BrowserModule, SwiperModule, SharedModule],
   providers: [],
   bootstrap: [AppComponent],
 })

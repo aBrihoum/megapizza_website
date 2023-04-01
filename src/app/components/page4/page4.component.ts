@@ -4,8 +4,10 @@ import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
 import { SharedService } from 'src/app/shared/services/city.service';
 import { SlideTypesT } from 'src/app/shared/interfaces/slides.model';
 import { TownI } from 'src/app/shared/interfaces/city.model';
-import * as Popper from '@popperjs/core';
-import Snackbar from 'node-snackbar';
+// import * as Popper from '@popperjs/core';
+// import Snackbar from 'node-snackbar';
+declare var Popper: any;
+declare var Snackbar: any;
 SwiperCore.use([Pagination]);
 @Component({
   selector: 'app-page4',
@@ -98,7 +100,6 @@ export class Page4Component {
       (document.querySelectorAll('.tooltip') as NodeListOf<HTMLDivElement>).forEach(
         (el) => (el.style.display = 'none')
       );
-    console.log('here');
   }
   ngOnInit() {
     // idk, i just hate the asyc pipe
