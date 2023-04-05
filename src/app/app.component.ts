@@ -28,6 +28,8 @@ export class AppComponent {
       appendScript('lg-zoom.umd.js');
       appendScript('lg-thumbnail.umd.js');
       appendScript('lg-rotate.umd.js');
+      //
+      appendStyle('late_styles.css');
     };
     function appendScript(name: string, init?: boolean) {
       let script = document.createElement('script');
@@ -43,6 +45,13 @@ export class AppComponent {
           });
           wow.init();
         });
+    }
+    function appendStyle(name: string) {
+      let style = document.createElement('link');
+      style.rel = 'stylesheet';
+      style.type = 'text/css';
+      style.href = name;
+      document.head.appendChild(style);
     }
   }
 }

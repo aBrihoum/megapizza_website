@@ -1,0 +1,9 @@
+//@ [bootstrap]
+@import "~bootstrap/scss/bootstrap";
+//@ [swiperJs]
+@import "swiper/scss";
+@import "swiper/scss/pagination";
+//@ [animations]
+@import "./assets/sass/animations.scss";
+//@ [global custom styles]
+@import "./assets/sass/global.scss";

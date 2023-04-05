@@ -24,7 +24,16 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/assets", "src/robots.txt"],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              {
+                "input": "src/late_styles.scss",
+                "inject": false
+              },
+              {
+                "input": "src/pre_styles.scss",
+                "inject": false
+              }
+            ],
             "scripts": [
               {
                 "input": "node_modules/bootstrap/dist/js/bootstrap.js",
