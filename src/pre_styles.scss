@@ -7,3 +7,14 @@
 @import "./assets/sass/animations.scss";
 //@ [global custom styles]
 @import "./assets/sass/global.scss";
+
+//@ [pre_fonts]
+
+@font-face {
+  font-family: "Daybury";
+  src: url("/assets/fonts/DayburyRegular.woff2") format("woff2"),
+    url("/assets/fonts/DayburyRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
