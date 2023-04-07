@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
-
-//@ts-ignore
-// import * as WOW from 'wow.js/dist/wow.js';
 declare var WOW: any;
-//@ts-ignore
-// import 'bootstrap';
+import 'lazysizes';
+import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
 @Component({
   selector: 'app-root',
   template: `

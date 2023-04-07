@@ -3,8 +3,8 @@
     <div class="blocks-container">
       <div class="block-1 wow">
         <img
-          src="./assets/images/pages/2/story.webp"
-          data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+          data-src="./assets/images/pages/2/story.webp"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
           class="img-res lazyload"
           alt="(La Méga Pizza) - Notre Histoire"
         />
@@ -14,8 +14,8 @@
         <div class="box">
           <div class="feather-image wow">
             <img
-              data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAQAAAD41K0JAAAADUlEQVR42mNkYGAEIwAAGwAE61CSsQAAAABJRU5ErkJggg=="
-              src="./assets/images/pieces/feather.webp"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAQAAAD41K0JAAAADUlEQVR42mNkYGAEIwAAGwAE61CSsQAAAABJRU5ErkJggg=="
+              data-src="./assets/images/pieces/feather.webp"
               class="img-res lazyload"
               alt="feather"
             />
@@ -23,8 +23,8 @@
           </div>
           <div class="signature-image wow">
             <img
-              data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
-              src="./assets/images/pages/2/signature.webp"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII="
+              data-src="./assets/images/pages/2/signature.webp"
               class="img-res lazyload"
               alt="signature"
             />
@@ -32,8 +32,8 @@
           </div>
           <div class="ornament-image wow">
             <img
-              data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAABCAQAAAC4AnxFAAAAC0lEQVR42mNkQAEAAB4AAiZVyN4AAAAASUVORK5CYII="
-              src="./assets/images/pieces/ornament.webp"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAABCAQAAAC4AnxFAAAAC0lEQVR42mNkQAEAAB4AAiZVyN4AAAAASUVORK5CYII="
+              data-src="./assets/images/pieces/ornament.webp"
               class="img-res lazyload"
               alt="ornament"
             />
@@ -76,8 +76,8 @@
   <div class="ornament-picture-2 wow">
     <img
       class="img-res lazyload"
-      data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAABCAQAAAC896x4AAAAC0lEQVR42mNkgAMAABYAAqmTp+YAAAAASUVORK5CYII="
-      src="./assets/images/pieces/c-ornament.webp"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAABCAQAAAC896x4AAAAC0lEQVR42mNkgAMAABYAAqmTp+YAAAAASUVORK5CYII="
+      data-src="./assets/images/pieces/c-ornament.webp"
       alt="ornament"
     />
     <img class="loading-svg" src="./assets/images/svg/loading.svg" alt="loading" />
@@ -92,15 +92,15 @@
       loop
       playsinline
       class="lazyload"
-      [src]="pickedTown.videoPath"
+      [attr.data-src]="pickedTown.videoPath"
       [attr.data-poster]="pickedTown.videoThumbnail"
     >
       <source type="video/mp4" />
     </video>
     <img
       (click)="toggleModal()"
-      data-tmp-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-      src="./assets/images/svg/play.svg"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+      data-src="./assets/images/svg/play.svg"
       alt="play Button"
       class="play-button lazyload"
     />
