@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ViewContainerRef } from '@angular/core';
 import 'lazysizes';
 import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
 declare var WOW: any;
@@ -7,43 +7,41 @@ declare var WOW: any;
   template: `
     <section>
       <app-page1></app-page1>
+      <ng-container #injectHere></ng-container>
     </section>
   `,
 })
 export class AppComponent {
-  ngAfterContentInit() {
-    // * lazysies _ lazyload
-    document.addEventListener('lazybeforeunveil', function (e: any) {
-      let bg = e.target?.getAttribute('data-bg');
-      let video = e.target?.hasAttribute('autoplay');
-      if (bg) {
-        e.target.style.backgroundImage = 'url(' + bg + ')';
-      }
-      if (video) {
-        e.target.muted = true;
-        e.target.load();
-      }
-    });
-    window.onload = () => {
-      //* ----------- scripts -----------
-      //? wow.js -------------------------------------
-      appendScript('wow.js', true);
-      //? popper -------------------------------------
-      appendScript('popper.js');
-      //? snackbar -------------------------------------
-      appendScript('snackbar.js');
-      //? lightgallery -------------------------------------
-      appendScript('lightgallery.umd.js');
-      // lightgallery - zoom
-      appendScript('lg-zoom.umd.js');
-      // lightgallery - thumbnail
-      appendScript('lg-thumbnail.umd.js');
-      // lightgallery - rotate
-      appendScript('lg-rotate.umd.js');
-      //* ----------- styles -----------
-      //? late styles -------------------------------------
-      appendStyle('late_styles.css');
+  @ViewChild('injectHere', { read: ViewContainerRef }) injectHere!: ViewContainerRef;
 
+  async load() {
+    const { Page2Component } = await import('./components/page2/page2.component');
+    this.injectHere.createComponent(Page2Component);
+    const { Page3Component } = await import('./components/page3/page3.component');
+    this.injectHere.createComponent(Page3Component);
+    const { Page4Component } = await import('./components/page4/page4.component');
+    this.injectHere.createComponent(Page4Component);
+    const { Page5Component } = await import('./components/page5/page5.component');
+    this.injectHere.createComponent(Page5Component);
+  }
+
+  ngAfterContentInit() {
+    let scripts = [
+      'wow.js',
+      'popper.js',
+      'snackbar.js',
+      'lightgallery.umd.js',
+      'lg-zoom.umd.js',
+      'lg-thumbnail.umd.js',
+      'lg-rotate.umd.js',
+    ];
+    window.onload = async () => {
+      //* ----------- load components -----------
+      await this.load();
+      //* ----------- load scripts -----------
+      scripts.forEach((el) => appendScript(el, el === 'wow.js' ? true : false));
+      //* ----------- laod styles -----------
+      appendStyle('late_styles.css');
       //* ----------- functions -----------
       function appendScript(name: string, init?: boolean) {
         let script = document.createElement('script');
@@ -69,5 +67,17 @@ export class AppComponent {
         document.head.appendChild(style);
       }
     };
+    //* ----------- lazysizes -----------
+    document.addEventListener('lazybeforeunveil', function (e: any) {
+      let bg = e.target?.getAttribute('data-bg');
+      let video = e.target?.hasAttribute('autoplay');
+      if (bg) {
+        e.target.style.backgroundImage = 'url(' + bg + ')';
+      }
+      if (video) {
+        e.target.muted = true;
+        e.target.load();
+      }
+    });
   }
 }
