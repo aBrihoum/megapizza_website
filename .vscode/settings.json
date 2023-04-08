@@ -17,5 +17,6 @@
     ".gitignore": true,
     "tmp": true,
     "readme-src": true
-  }
+  },
+  "cSpell.enabled": false
 }
