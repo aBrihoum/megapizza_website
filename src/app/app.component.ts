@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component } from '@angular/core';
 import 'lazysizes';
 import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
 declare var WOW: any;
@@ -7,29 +7,14 @@ declare var WOW: any;
   template: `
     <section>
       <app-page1></app-page1>
-      <ng-container #injectHere>
-        <div #placeHolder style="height:100vh;"></div>
-      </ng-container>
+      <app-page2></app-page2>
+      <app-page3></app-page3>
+      <app-page4></app-page4>
+      <app-page5></app-page5>
     </section>
   `,
 })
 export class AppComponent {
-  @ViewChild('injectHere', { read: ViewContainerRef }) injectHere!: ViewContainerRef;
-  @ViewChild('placeHolder') placeHolder!: ElementRef<HTMLDivElement>;
-
-  async load() {
-    const { Page2Component } = await import('./components/page2/page2.component');
-    // chrome lighthouse LCP fix
-    this.placeHolder.nativeElement.remove();
-    this.injectHere.createComponent(Page2Component);
-    const { Page3Component } = await import('./components/page3/page3.component');
-    this.injectHere.createComponent(Page3Component);
-    const { Page4Component } = await import('./components/page4/page4.component');
-    this.injectHere.createComponent(Page4Component);
-    const { Page5Component } = await import('./components/page5/page5.component');
-    this.injectHere.createComponent(Page5Component);
-  }
-
   ngAfterContentInit() {
     let scripts = [
       'wow.js',
@@ -41,8 +26,6 @@ export class AppComponent {
       'lg-rotate.umd.js',
     ];
     window.onload = async () => {
-      //* ----------- load components -----------
-      await this.load();
       //* ----------- load scripts -----------
       scripts.forEach((el) => appendScript(el, el === 'wow.js' ? true : false));
       //* ----------- laod styles -----------
