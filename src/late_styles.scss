@@ -1,3 +1,11 @@
-@import "./assets/fonts/fonts.css";
-@import "./assets/sass/lightgallery.scss";
+//@ [snackbar]
 @import "~node-snackbar/dist/snackbar.css";
+//@ [lightGallery]
+@import "~lightgallery/scss/lightgallery-core";
+@import "~lightgallery/scss/lg-fonts";
+@import "~lightgallery/scss/lg-theme-default";
+@import "~lightgallery/scss/lg-zoom";
+@import "~lightgallery/scss/lg-thumbnail";
+@import "~lightgallery/scss/lg-rotate";
+//@ [fonts]
+@import "./assets/fonts/fonts.css";

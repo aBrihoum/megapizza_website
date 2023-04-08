@@ -1,16 +1,18 @@
-@import "./assets/sass/swiper.scss";
+//@ [SwiperJs]
+@import "swiper/scss";
+@import "swiper/scss/pagination";
+//@ [animations]
 @import "./assets/sass/animations.scss";
-@import "./assets/sass/pre-fonts.scss";
+//@ [global custom styles]
 @import "./assets/sass/global.scss";
-// yea, too lazy to use sass vars
-:root {
-  --brown-1: #191414;
-  --brown-2: #271b1b;
-  --brown-3: #2c2121;
-  --brown-3-1: #372e1c;
-  --brown-4: #6a5951;
-  --brown-5: #695950;
-  --brown-6: #f0d7b8;
-  --orange: #ffac11;
-  --glass: rgba(80, 80, 80, 15%);
+
+//@ [pre_fonts]
+
+@font-face {
+  font-family: "Daybury";
+  src: url("/assets/fonts/DayburyRegular.woff2") format("woff2"),
+    url("/assets/fonts/DayburyRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
