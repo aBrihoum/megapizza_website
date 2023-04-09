@@ -3,19 +3,7 @@
 
 ## Mega Pizza - The Website
 
-<a href="https://angular.io/" target="_blank" rel="noopener noreferrer">
-<img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular">
-</a>
-<a href="https://sass-lang.com/" target="_blank" rel="noopener noreferrer">
-<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white">
-</a>
-<a href="https://megapizza-v3.vercel.app" target="_blank" rel="noopener noreferrer">
-<img src="https://img.shields.io/badge/Vercel-preview%20online-green?style=for-the-badge&logo=vercel">
-</a>
-</a>
-<a href="https://github1s.com/aBrihoum/megapizza_website/blob/master/src/app/app.module.ts" target="_blank" rel="noopener noreferrer">
-<img src="https://img.shields.io/badge/github1s-View%20project-blue?style=for-the-badge&logo=github">
-</a>
+[![angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular)](https://angular.io/) [![sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)](ttps://sass-lang.com/) [![vercel](https://img.shields.io/badge/Vercel-preview%20online-green?style=for-the-badge&logo=vercel)](https://megapizza-v3.vercel.app) [![github1s](https://img.shields.io/badge/github1s-View%20project-blue?style=for-the-badge&logo=github)]("https://github1s.com/aBrihoum/megapizza_website/blob/master/src/app/app.module.ts)
 
 </div>
 
@@ -34,17 +22,15 @@ This project is made with the help of :
 
 <div align="center">
 
-[![Preview](https://i.ibb.co/5F9ZsvG/youtube-cover.webp)](https://www.youtube.com/watch?v=uiHGt7nq0wc)
+[![Preview](https://i.ibb.co/jfRZ6gq/youtube-cover.webp)](https://www.youtube.com/watch?v=uiHGt7nq0wc)
 
-<img src="https://i.ibb.co/d64K0DK/prev1.webp" width="32%"></img>
-<img src="https://i.ibb.co/7kcRGdd/prev2.webp" width="32%"></img>
-<img src="https://i.ibb.co/HCqKFXJ/prev3.webp" width="32%"></img>
+<img src="https://i.ibb.co/FBsJL7Y/prev1.webp" width="32%"><img src="https://i.ibb.co/X437MmN/prev2.webp" width="32%"><img src="https://i.ibb.co/HVFVxrv/prev3.webp" width="32%">
 
 <br/>
 
-Thanks to [Vercel](https://vercel.com/), you can play with the project online
+▶ Visite the website
 
-[![Mega Pizza Preview](https://img.shields.io/badge/Vercel-preview%20online-green?style=for-the-badge&logo=vercel)](https://megapizza-v3.vercel.app)
+[![MegaPizza Preview](https://img.shields.io/badge/Vercel-preview%20online-green?style=for-the-badge&logo=vercel)](https://megapizza-v3.vercel.app)
 
 </div>
 
@@ -55,8 +41,9 @@ Thanks to [Vercel](https://vercel.com/), you can play with the project online
 - Every picture is **lazy loaded**
 - Every picture has a `LQIP` (Low Quality Image Placeholder) and a loading indicator
 - Every third-party `JavaScript` library is _lazy loaded_
-- Every critical CSS is **preloaded**
-- Every uncritical CSS is l**azy loaded**
+- Every critical styling is **preloaded**
+- Every non-critical styling is **lazy loaded**
+- Every critical font/picture is **preloaded**
 - Super **responsive** (min : `280px`)
 - Super **fast loading** (`0.5s`)
 - Super low initial page size
@@ -88,25 +75,27 @@ Although it's true that the website could have been built using `vanilla JavaScr
 
 <div align="center">
 
-<img src="https://i.ibb.co/QDkSjsT/lighthouse.webp" width="50%" />
+<img src="https://i.ibb.co/nR8wP0p/lighthouse.webp" width="60%" />
 
-<br/>
+<br/><br/>
 
-<img src="https://img.shields.io/badge/lighthouse-view%20report-blue?style=for-the-badge&logo=lighthouse" />
+[![lighthouse](https://img.shields.io/badge/lighthouse-view%20report-blue?style=for-the-badge&logo=lighthouse)](https://googlechrome.github.io/lighthouse/viewer/?gist=4ebba9250e9b7e950151e9cf8c6232cb)
+
+I just can't sleep if my website has a bad score 💯.
 
 </div>
-Of course 💯 man, what did you expect? me not sleeping?
 
 ---
 
 <div align="center">
-<img width="50" src="https://res.cloudinary.com/practicaldev/image/fetch/s--pcSkTMZL--/c_limit,f_auto,fl_progressive,q_80,w_190/https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+<img width="50" src="https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
+
+<br/><br/>
 
 Checkout my article on `dev.to` explaining the steps & technique I used to optimize this website :
 
-<a href="https://dev.to/brihoum/how-i-optimized-my-angular-website-3fd0" target="_blank" rel="noopener noreferrer">
-<img width="500" src="https://i.ibb.co/C5QzXFM/99.webp">
-</a>
+[<img width="500" src="https://i.ibb.co/C5QzXFM/99.webp">](https://dev.to/brihoum/how-i-optimized-my-angular-website-3fd0)
+
 </div>
 
 ---
