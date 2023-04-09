@@ -77,7 +77,7 @@ Although it's true that the website could have been built using `vanilla JavaScr
 
 <img src="https://i.ibb.co/nR8wP0p/lighthouse.webp" width="60%" />
 
-<br/><br/>
+$~$
 
 [![lighthouse](https://img.shields.io/badge/lighthouse-view%20report-blue?style=for-the-badge&logo=lighthouse)](https://googlechrome.github.io/lighthouse/viewer/?gist=4ebba9250e9b7e950151e9cf8c6232cb)
 
@@ -90,7 +90,7 @@ I just can't sleep if my website has a bad score 💯.
 <div align="center">
 <img width="50" src="https://practicaldev-herokuapp-com.freetls.fastly.net/assets/devlogo-pwa-512.png">
 
-<br/><br/>
+$~$
 
 Checkout my article on `dev.to` explaining the steps & technique I used to optimize this website :
 
