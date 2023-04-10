@@ -1,5 +1,5 @@
 <div align="center">
-<img width="150" src="https://i.imgur.com/6wsFJbB.png">
+<img width="150" src="https://i.ibb.co/McybKYW/megapizza-300px.webp">
 
 ## Mega Pizza - The Website
 
@@ -94,7 +94,7 @@ $~$
 
 Checkout my article on `dev.to` explaining the steps & technique I used to optimize this website :
 
-[<img width="500" src="https://i.ibb.co/C5QzXFM/99.webp">](https://dev.to/brihoum/how-i-optimized-my-angular-website-3fd0)
+[<img width="500" src="https://i.ibb.co/1226FSg/metatags.webp">](https://dev.to/brihoum/how-i-optimized-my-angular-website-3fd0)
 
 </div>
 
