@@ -71,6 +71,33 @@ Although it's true that the website could have been built using `vanilla JavaScr
 - A loyalty program
 - A dedicated mobile application.
 
+# Project structure
+
+It follows a simple structure :
+
+```
+📦
+└─ src/
+   ├─ app/
+   │  ├─ components/
+   │  │  ├─ page1/
+   │  │  ├─ page2/
+   │  │  ├─ page3/
+   │  │  ├─ page4/
+   │  │  └─ page5/
+   │  ├─ shared/
+   │  │  ├─ components/
+   │  │  │  ├─ modal/
+   │  │  │  └─ slide/
+   │  │  ├─ interfaces/
+   │  │  ├─ pipes/
+   │  │  ├─ services/
+   │  │  └─ shared.module.ts
+   │  ├─ app.component.ts
+   │  └─ app.module.ts
+   └─ index.html
+```
+
 # Lighthouse
 
 <div align="center">
@@ -97,8 +124,6 @@ Checkout my article on `dev.to` explaining the steps & technique I used to optim
 [<img width="500" src="https://i.ibb.co/1226FSg/metatags.webp">](https://dev.to/brihoum/how-i-optimized-my-angular-website-3fd0)
 
 </div>
-
----
 
 # Quick start
 
