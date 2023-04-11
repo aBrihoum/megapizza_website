@@ -3,7 +3,7 @@
 
 ## Mega Pizza - The Website
 
-[![angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular)](https://angular.io/) [![sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)](ttps://sass-lang.com/) [![vercel](https://img.shields.io/badge/Vercel-preview%20online-green?style=for-the-badge&logo=vercel)](https://megapizza-v3.vercel.app) [![github1s](https://img.shields.io/badge/github1s-View%20project-blue?style=for-the-badge&logo=github)]("https://github1s.com/aBrihoum/megapizza_website/blob/master/src/app/app.module.ts)
+[![angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular)](https://angular.io/) [![sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/) [![vercel](https://img.shields.io/badge/Vercel-preview%20online-green?style=for-the-badge&logo=vercel)](https://megapizza-v3.vercel.app) [![github1s](https://img.shields.io/badge/github1s-View%20project-blue?style=for-the-badge&logo=github)](https://github1s.com/aBrihoum/megapizza_website/blob/master/src/app/app.module.ts)
 
 </div>
 
@@ -60,7 +60,7 @@ Coding the website was a fun challenge, but optimizing it proved to be a bit mor
 
 This website is designed to be fully responsive and optimized for viewing on screens **of all sizes**. I thoroughly tested it on a wide range of viewports to ensure that it looks great and functions flawlessly no matter what device you're using. It's worth noting that the website's minimum supported width is `280px`, which is compatible with devices such as the `Galaxy Fold 1`.
 
-## Why angular ?
+## Why Angular ?
 
 You may say that the website is simple enough to just use vanilla JavaScript, and yes, you are right, but like I already mentioned, this version is a `lite` version, the original one was supposed to have ton of features, like ordering online and having a realtime status of the latter, sharing thoughts and leaving reviews, a discount program, a mobile application...
 
